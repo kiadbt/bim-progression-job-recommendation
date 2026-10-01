@@ -1,0 +1,19 @@
+experiment:
+  name: E14A_RP3Beta_fixed_candidate_protocol
+  purpose: same-protocol comparison with a strong published OLX graph baseline
+training:
+  graph: all distinct user-item pairs strictly before validation start
+  alpha: 1.0
+  alpha_policy: canonical fixed path exponent
+selection:
+  split: validation_only
+  metric: NDCG_at_10_then_Recall_at_10
+  beta_grid: [0.3, 0.6, 1.0]
+  topk_grid: [50, 100, 200]
+evaluation:
+  earliest_target_per_user_and_split: true
+  sampled_unseen_negatives: 999
+  seed: 20260827
+  batch_size: 256
+  tie_policy: pessimistic
+  test_policy: report_once_after_validation_selection

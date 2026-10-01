@@ -1,0 +1,38 @@
+{
+  "status": "completed",
+  "protocol": "authors official 80th timestamp percentile; train users only; seen test pairs removed; unique test pairs; full catalog top10",
+  "cutoff": 1582401299,
+  "training_pairs": 38250591,
+  "test_pairs": 6110047,
+  "test_users": 619389,
+  "item_count": 185395,
+  "models": [
+    {
+      "precision": 0.04749890618004401,
+      "recall": 0.07822778468890898,
+      "ndcg": 0.07468864468648247,
+      "mAP": 0.038558979218547895,
+      "MRR": 0.13325449988379254,
+      "HR": 0.3105415175277572,
+      "catalog_coverage": 0.6592518676339707,
+      "shannon": 10.317778314759977,
+      "users": 619389,
+      "model": "RP3Beta_frozen"
+    },
+    {
+      "precision": 0.05171531945181921,
+      "recall": 0.08221197216612514,
+      "ndcg": 0.08040866215938451,
+      "mAP": 0.04187787039356521,
+      "MRR": 0.14363953127173223,
+      "HR": 0.324700632397411,
+      "catalog_coverage": 0.56405512554276,
+      "shannon": 10.072142261734234,
+      "users": 619389,
+      "model": "P3LTR_degree_recency"
+    }
+  ],
+  "p3ltr_scope": "published stable degree-recency component; event parameters unavailable",
+  "duration_seconds": 505.2664465904236,
+  "completed_at_utc": "2026-09-01T02:08:28.055563+00:00"
+}

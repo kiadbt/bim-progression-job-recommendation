@@ -1,0 +1,59 @@
+{
+  "status": "completed",
+  "selection": "maximum validation NDCG subject to catalog coverage >= 95% of validation RP3Beta",
+  "validation_cutoff": 1582239167,
+  "test_cutoff": 1582401299,
+  "validation_users": 30000,
+  "baseline_validation_coverage": 0.2979098681194207,
+  "coverage_threshold": 0.28301437471344965,
+  "selected_gamma": 0.1,
+  "selected_lambda_popularity": 0.0,
+  "selected_validation": [
+    {
+      "precision": 0.04151666666666692,
+      "recall": 0.07258939267229106,
+      "ndcg": 0.06721342763936645,
+      "mAP": 0.03556060864407452,
+      "MRR": 0.11665417989418068,
+      "HR": 0.268,
+      "catalog_coverage": 0.28617276625583216,
+      "shannon": 10.072454889499848,
+      "users": 30000,
+      "gamma": 0.1,
+      "lambda_popularity": 0.0,
+      "coverage_feasible": true
+    }
+  ],
+  "test": [
+    {
+      "precision": 0.04749890618004401,
+      "recall": 0.07822778468890898,
+      "ndcg": 0.07468864468648247,
+      "mAP": 0.038558979218547895,
+      "MRR": 0.13325449988379254,
+      "HR": 0.3105415175277572,
+      "catalog_coverage": 0.6592680493001429,
+      "shannon": 10.318034452602387,
+      "users": 619389,
+      "gamma": 0.0,
+      "lambda_popularity": 0.0,
+      "model": "RP3Beta"
+    },
+    {
+      "precision": 0.047670688371848284,
+      "recall": 0.07842161513324705,
+      "ndcg": 0.07490984842664306,
+      "mAP": 0.03867165135083662,
+      "MRR": 0.13363433529096702,
+      "HR": 0.31143594736102836,
+      "catalog_coverage": 0.6394670837940614,
+      "shannon": 10.251068159273242,
+      "users": 619389,
+      "gamma": 0.1,
+      "lambda_popularity": 0.0,
+      "model": "diversity_controlled_progression_RP3Beta"
+    }
+  ],
+  "duration_seconds": 754.2468845844269,
+  "completed_at_utc": "2026-09-01T03:02:45.066380+00:00"
+}

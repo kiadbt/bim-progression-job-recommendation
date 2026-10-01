@@ -1,0 +1,5 @@
+cohort,model,users,test_pairs,recall_at_10,ndcg_at_10,mrr_at_10,hit_rate_at_10,catalog_coverage,coverage_retention_vs_rp3beta
+earlier_60_to_80_percent_interval,RP3Beta,613754,4876608,0.072113,0.067194,0.117536,0.269422,0.651237,1.0000
+earlier_60_to_80_percent_interval,Frozen diversity-constrained progression RP3Beta,613754,4876608,0.072359,0.067540,0.118139,0.270507,0.631597,0.9698
+later_80_to_100_percent_interval,RP3Beta,619389,6110047,0.078228,0.074689,0.133254,0.310542,0.659268,1.0000
+later_80_to_100_percent_interval,Frozen diversity-constrained progression RP3Beta,619389,6110047,0.078422,0.074910,0.133634,0.311436,0.639467,0.9700

@@ -1,0 +1,45 @@
+# Raw and processed datasets
+data/
+datasets/
+**/raw/
+**/cache/
+*.parquet
+*.feather
+*.arrow
+*.pkl
+*.pickle
+
+# User-level or model artifacts
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+
+# Credentials and local configuration
+.env
+.env.*
+*.key
+*.pem
+credentials*
+secrets*
+
+# Python and notebook state
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Local outputs and logs
+logs/
+tmp/
+.tmp/
+outputs/
+*.log
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

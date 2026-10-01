@@ -1,0 +1,20 @@
+experiment:
+  name: E18A_deployable_progression_full_catalog
+context:
+  target_pathway_used: false
+  progression_signal: log1p_item_successful_contact_count_before_cutoff
+  successful_events: [contact_chat, contact_phone_click_2, contact_phone_click_3]
+validation:
+  chronological_cutoff: 1582239167
+  users: 30000
+  sampling_seed: 10
+  gamma_grid: [0, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1]
+  selection_metric: NDCG_at_10_then_Recall_at_10
+  selected_gamma: 0.25
+test:
+  published_protocol_cutoff: 1582401299
+  users: 619389
+  full_catalog: true
+  target_context_leakage: forbidden
+statistics:
+  paired_user_bootstrap_replicates: 1000

@@ -1,0 +1,15 @@
+experiment:
+  name: E19A_diversity_controlled_progression_full_catalog
+selection:
+  objective: maximize_validation_NDCG_at_10
+  constraint: catalog_coverage_at_least_95_percent_of_RP3Beta
+  gamma_grid: [0, 0.1, 0.25, 0.5]
+  popularity_penalty_grid: [0, 0.025, 0.05, 0.1, 0.2]
+  selected_gamma: 0.1
+  selected_popularity_penalty: 0
+evaluation:
+  published_full_catalog_users: 619389
+  paired_user_bootstrap_replicates: 1000
+interpretation:
+  preferred_deployable_progression_configuration: true
+  explicit_popularity_penalty_supported: false

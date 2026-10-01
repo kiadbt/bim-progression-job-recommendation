@@ -1,0 +1,44 @@
+{
+  "status": "completed_frozen_temporal_transfer",
+  "selection": "gamma and lambda transferred unchanged from E19; no cohort tuning",
+  "start_cutoff": 1582239167,
+  "end_cutoff_exclusive": 1582401299,
+  "training_pairs": 30979208,
+  "test_pairs": 4876608,
+  "test_users": 613754,
+  "item_count": 185395,
+  "frozen_gamma": 0.1,
+  "frozen_lambda_popularity": 0.0,
+  "metrics": [
+    {
+      "precision": 0.041644860970312544,
+      "recall": 0.0721127489903138,
+      "ndcg": 0.06719448425875618,
+      "mAP": 0.03530283695442375,
+      "MRR": 0.1175356921346958,
+      "HR": 0.2694222766776265,
+      "catalog_coverage": 0.6512365489899944,
+      "shannon": 10.306907969687806,
+      "users": 613754,
+      "gamma": 0.0,
+      "lambda_popularity": 0.0,
+      "model": "RP3Beta"
+    },
+    {
+      "precision": 0.04188453354270998,
+      "recall": 0.07235937752171231,
+      "ndcg": 0.06753964621864555,
+      "mAP": 0.03550056801200225,
+      "MRR": 0.1181389313415928,
+      "HR": 0.2705074019884188,
+      "catalog_coverage": 0.631597400145635,
+      "shannon": 10.23589758381428,
+      "users": 613754,
+      "gamma": 0.1,
+      "lambda_popularity": 0.0,
+      "model": "frozen_diversity_constrained_progression_RP3Beta"
+    }
+  ],
+  "duration_seconds": 476.9506857395172,
+  "completed_at_utc": "2026-09-01T07:27:34.391708+00:00"
+}

@@ -1,0 +1,16 @@
+experiment:
+  name: E17A_published_OLX_full_catalog
+split:
+  raw_timestamp_percentile: 80
+  cutoff: 1582401299
+  restrict_test_to_train_users: true
+  remove_seen_test_pairs: true
+  unique_test_user_item_pairs: true
+evaluation:
+  target_users: 619389
+  catalog_items: 185395
+  recommendations_per_user: 10
+  sampled_negatives: false
+models:
+  - frozen_RP3Beta_alpha1_beta0.3_topK200
+  - P3LTR_published_degree_recency_topK205

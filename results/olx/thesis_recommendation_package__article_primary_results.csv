@@ -1,0 +1,13 @@
+split,model,recall_at_10,ndcg_at_10,mrr_at_10,status
+test,Global popularity,0.075393,0.039353,0.028515,baseline
+test,Directed item transition,0.118462,0.113149,0.111293,baseline
+test,LightGCN three-seed mean,0.151242,0.084911,0.064740,baseline
+test,BPR three-seed mean,0.180897,0.102754,0.078866,baseline
+test,BPR ensemble,0.182169,0.103822,0.079885,ensemble reference
+test,Behavior-aware LightGCN three-seed mean,0.214950,0.133679,0.108687,recent trainable graph comparator; MB-HGCN-style not reproduction
+test,BPR-transition hybrid,0.251673,0.183103,0.161950,strong reference
+test,Relation-aware signed hybrid,0.251673,0.184528,0.163735,earlier BPR-based signed reranker
+test,RP3Beta,0.436999,0.358479,0.333162,strong graph baseline selected on validation
+test,BIM-risk signed RP3Beta reranker,0.440345,0.360645,0.335010,improves RP3Beta but rejected versus progression-only control
+test,Progression-aware RP3Beta reranker,0.442654,0.361574,0.335540,final proposed accuracy model; statistically tied with P3LTR degree-recency
+test,P3LTR degree-recency reproduction,0.443314,0.362094,0.335871,published stable parameters; statistically tied with progression-aware RP3Beta

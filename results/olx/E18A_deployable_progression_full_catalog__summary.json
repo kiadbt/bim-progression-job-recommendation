@@ -1,0 +1,64 @@
+{
+  "status": "completed",
+  "context_policy": "global item successful-contact count strictly before cutoff; no target pathway",
+  "validation_cutoff": 1582239167,
+  "test_cutoff": 1582401299,
+  "validation_users": 30000,
+  "gamma_grid": [
+    0,
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    1
+  ],
+  "selected_gamma": 0.25,
+  "validation_selected": [
+    {
+      "precision": 0.04161000000000036,
+      "recall": 0.07236799825232107,
+      "ndcg": 0.0673775852617873,
+      "mAP": 0.03567933784223537,
+      "MRR": 0.11727552910052988,
+      "HR": 0.2674666666666667,
+      "catalog_coverage": 0.26875589956579193,
+      "shannon": 9.968498947855684,
+      "users": 30000,
+      "gamma": 0.25
+    }
+  ],
+  "test_users": 619389,
+  "test_pairs": 6110047,
+  "test": [
+    {
+      "precision": 0.047499067629472404,
+      "recall": 0.07822782138196088,
+      "ndcg": 0.07468875678279341,
+      "mAP": 0.03855899939972644,
+      "MRR": 0.13325470169557804,
+      "HR": 0.3105431320220411,
+      "catalog_coverage": 0.6592464737452466,
+      "shannon": 10.316874275965088,
+      "users": 619389,
+      "gamma": 0,
+      "model": "RP3Beta"
+    },
+    {
+      "precision": 0.0477116965266583,
+      "recall": 0.07832591335359602,
+      "ndcg": 0.07498979116727547,
+      "mAP": 0.03871319158224087,
+      "MRR": 0.13404787967304413,
+      "HR": 0.31196711598042587,
+      "catalog_coverage": 0.6081771353056986,
+      "shannon": 10.142137489390366,
+      "users": 619389,
+      "gamma": 0.25,
+      "model": "deployable_progression_RP3Beta"
+    }
+  ],
+  "duration_seconds": 602.0370948314667,
+  "completed_at_utc": "2026-09-01T02:25:11.748299+00:00"
+}

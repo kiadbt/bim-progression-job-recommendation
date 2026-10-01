@@ -1,0 +1,67 @@
+{
+  "status": "completed",
+  "cutoff": 1582401299,
+  "users": 619389,
+  "test_pairs": 6110047,
+  "bootstrap_replicates_per_subgroup": 500,
+  "factors": [
+    "history_band",
+    "activity_band",
+    "pathway",
+    "target_popularity_band"
+  ],
+  "significant_positive_cells": 38,
+  "significant_negative_cells": 8,
+  "total_subgroup_metric_cells": 64,
+  "exposure": [
+    {
+      "model": "RP3Beta",
+      "popularity_band": "head_top_10pct",
+      "items_in_band": 17870,
+      "distinct_items_exposed": 17666,
+      "within_band_coverage": 0.9885842193620593,
+      "recommendation_exposure_share": 0.6344460427937855
+    },
+    {
+      "model": "RP3Beta",
+      "popularity_band": "middle_10_50pct",
+      "items_in_band": 71478,
+      "distinct_items_exposed": 64737,
+      "within_band_coverage": 0.9056912616469404,
+      "recommendation_exposure_share": 0.3289971245856804
+    },
+    {
+      "model": "RP3Beta",
+      "popularity_band": "tail_bottom_50pct",
+      "items_in_band": 89348,
+      "distinct_items_exposed": 39822,
+      "within_band_coverage": 0.445695482831177,
+      "recommendation_exposure_share": 0.03655683262053411
+    },
+    {
+      "model": "progression_RP3Beta",
+      "popularity_band": "head_top_10pct",
+      "items_in_band": 17870,
+      "distinct_items_exposed": 17642,
+      "within_band_coverage": 0.987241186345831,
+      "recommendation_exposure_share": 0.6529092379748429
+    },
+    {
+      "model": "progression_RP3Beta",
+      "popularity_band": "middle_10_50pct",
+      "items_in_band": 71478,
+      "distinct_items_exposed": 63689,
+      "within_band_coverage": 0.8910294076499062,
+      "recommendation_exposure_share": 0.31511053635114605
+    },
+    {
+      "model": "progression_RP3Beta",
+      "popularity_band": "tail_bottom_50pct",
+      "items_in_band": 89348,
+      "distinct_items_exposed": 37223,
+      "within_band_coverage": 0.41660697497425797,
+      "recommendation_exposure_share": 0.031980225674011
+    }
+  ],
+  "completed_at_utc": "2026-09-01T08:38:58.954986+00:00"
+}

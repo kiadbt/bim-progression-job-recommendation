@@ -1,0 +1,36 @@
+experiment:
+  name: E21_behavior_aware_lightgcn
+  status: feasibility_implementation
+  domain: olx_jobs
+
+protocol:
+  cutoff: 1582312306
+  candidates: earliest_target_per_user_and_split_with_999_unseen_negatives
+  evaluation_seed: 20260827
+  cold_start: excluded_consistent_with_frozen_protocol
+
+model:
+  description: shared_embedding_global_plus_successful_contact_hierarchical_lightgcn
+  fidelity: MB-HGCN_style_comparator_not_MB-HGCN_reproduction
+  global_graph: all_distinct_pre_cutoff_user_item_pairs
+  behavior_graph:
+    successful_contact_events: [contact_chat, contact_phone_click_2, contact_phone_click_3]
+  fusion: learned_scalar_convex_gate
+  losses:
+    target: fused_successful_contact_BPR
+    auxiliary: global_interaction_BPR
+    relation: successful_contact_channel_BPR
+
+feasibility:
+  dimension: 8
+  epochs: 1
+  global_sample: 125000
+  success_sample: 125000
+  auxiliary_weight: 0.25
+  relation_weight: 0.25
+  initial_global_gate: 0.5
+  hardware: NVIDIA_GeForce_RTX_2060_6GB
+
+decision_rule:
+  proceed_to_validation_sweep_if: completes_without_OOM_and_metrics_are_finite
+  final_claim_rule: compare_three_seed_mean_and_paired_ranks_not_best_seed

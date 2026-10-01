@@ -1,0 +1,2 @@
+dataset,stage,scope,conclusion,window,pathway,statistic,gamma,users,stage1_users,reach_gain_pp,mean_delta_ndcg@10,ci95_lower,ci95_upper,p_delta_le_zero,coverage_ratio,replicates,runtime_seconds,test_status,protocol_execution
+taobao,2,candidate_conditional_historically_reused_holdout,inconclusive,1d,fav_only,smoothed_conversion_rate,0.02,7762,6475,12.87,0.000107932788081264,-1.7741700462439535e-05,0.00030842667261925824,0.08295852073963018,0.997191954,2000,1800.9231970999972,historically_reused,partial_with_documented_deviations

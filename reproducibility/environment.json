@@ -1,0 +1,22 @@
+{
+  "generated_at_utc": "2026-09-01T09:47:49.708167+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.13 (main, Aug  7 2026, 02:26:41) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "duckdb": "1.5.5",
+    "matplotlib": "3.11.1"
+  },
+  "cuda_available": true,
+  "cuda_runtime": "12.8",
+  "gpu": "NVIDIA GeForce RTX 2060",
+  "nvidia_driver": "591.86",
+  "notes": [
+    "CPU sparse experiments do not report peak process memory because it was not instrumented prospectively.",
+    "Throughput is conservative end-to-end wall-clock throughput and includes graph construction/evaluation overhead described by scope.",
+    "Artifact hashes verify exact local inputs, implementations, authoritative outputs, and vector figures; they do not imply public redistribution rights for the dataset."
+  ]
+}

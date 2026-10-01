@@ -1,0 +1,66 @@
+{
+  "experiment": "RP3Beta under frozen sampled-candidate protocol",
+  "status": "completed",
+  "selection_policy": "validation NDCG@10 then Recall@10",
+  "alpha": 1.0,
+  "selected_beta": 0.3,
+  "selected_topk": 200,
+  "beta_grid": [
+    0.3,
+    0.6,
+    1.0
+  ],
+  "topk_grid": [
+    50,
+    100,
+    200
+  ],
+  "training_cutoff_timestamp": 1582312306,
+  "training_users": 2617884,
+  "training_positive_pairs": 34193207,
+  "global_item_count": 185395,
+  "cold_start_evaluation_cases_excluded": 17089,
+  "evaluation_seed": 20260827,
+  "evaluation_negatives": 999,
+  "tie_policy": "pessimistic: ties count ahead",
+  "selected_evaluation": [
+    {
+      "split": "test",
+      "evaluation_cases": 21222,
+      "beta": 0.3,
+      "topk": 200,
+      "recall_at_5": 0.40769013288097256,
+      "ndcg_at_5": 0.3489330056637802,
+      "mrr_at_5": 0.3291827663116891,
+      "recall_at_10": 0.43699934030722837,
+      "ndcg_at_10": 0.358478832394303,
+      "mrr_at_10": 0.3331620899545695,
+      "recall_at_20": 0.45740269531618133,
+      "ndcg_at_20": 0.3636901118948905,
+      "mrr_at_20": 0.3346207282447819,
+      "recall_at_100": 0.48190556969182924,
+      "ndcg_at_100": 0.3683976749997773,
+      "mrr_at_100": 0.3353286463801733
+    },
+    {
+      "split": "validation",
+      "evaluation_cases": 39803,
+      "beta": 0.3,
+      "topk": 200,
+      "recall_at_5": 0.5330251488581262,
+      "ndcg_at_5": 0.45829378742203986,
+      "mrr_at_5": 0.43315495481915095,
+      "recall_at_10": 0.5667160766776373,
+      "ndcg_at_10": 0.4693033263330181,
+      "mrr_at_10": 0.43776577820368495,
+      "recall_at_20": 0.5867899404567495,
+      "ndcg_at_20": 0.47441624992768666,
+      "mrr_at_20": 0.4391887830953004,
+      "recall_at_100": 0.6073160314549154,
+      "ndcg_at_100": 0.47839875579352953,
+      "mrr_at_100": 0.43980321464865096
+    }
+  ],
+  "duration_seconds": 444.15982961654663,
+  "completed_at_utc": "2026-08-31T15:56:41.588792+00:00"
+}

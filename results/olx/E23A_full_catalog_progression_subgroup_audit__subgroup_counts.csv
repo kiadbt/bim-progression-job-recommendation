@@ -1,0 +1,17 @@
+factor,group,users
+history_band,dense_Q4,154848
+history_band,Q3,154847
+history_band,Q2,154847
+history_band,sparse_Q1,154847
+activity_band,high_Q4,154848
+activity_band,Q3,154847
+activity_band,Q2,154847
+activity_band,low_Q1,154847
+pathway,no_prior_success,445950
+pathway,chat_only,94301
+pathway,phone_only,49019
+pathway,mixed_chat_phone,30119
+target_popularity_band,head_target_Q4,154848
+target_popularity_band,tail_target_Q1,154847
+target_popularity_band,Q3,154847
+target_popularity_band,Q2,154847

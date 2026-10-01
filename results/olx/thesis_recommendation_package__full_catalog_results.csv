@@ -1,0 +1,8 @@
+model,precision_at_10,recall_at_10,ndcg_at_10,map_at_10,mrr_at_10,hit_rate_at_10,catalog_coverage,shannon,users,protocol
+Frozen RP3Beta,0.047499,0.078228,0.074689,0.038559,0.133254,0.310542,0.659252,10.317778,619389,published OLX 80/20 full catalog
+Deployable progression-aware RP3Beta,0.047712,0.078326,0.074990,0.038713,0.134048,0.311967,0.608177,10.142137,619389,published OLX 80/20 full catalog; gamma 0.25 selected chronologically
+Diversity-constrained progression RP3Beta,0.047671,0.078422,0.074910,0.038672,0.133634,0.311436,0.639467,10.251068,619389,published OLX 80/20 full catalog; gamma 0.1; at least 95% validation coverage retained
+Contextual chat-phone progression RP3Beta,0.047679,0.078447,0.074924,0.038676,0.133670,0.311492,0.641684,10.256053,619389,rejected personalization; test differences nonsignificant and shuffled validation control not beaten
+P3LTR degree-recency reproduction,0.051715,0.082212,0.080409,0.041878,0.143640,0.324701,0.564055,10.072142,619389,published OLX 80/20 full catalog
+Published RP3Beta,0.0484,0.0783,0.0759,0.0393,0.1365,,,,619389,published paper reported
+Published full P3LTR,0.0515,0.0817,0.0798,0.0414,0.1423,,,,619389,published paper reported
