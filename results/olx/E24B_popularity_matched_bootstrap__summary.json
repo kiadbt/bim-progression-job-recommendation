@@ -1,0 +1,124 @@
+{
+  "results": [
+    {
+      "comparison": "progression_minus_baseline",
+      "metric": "recall_at_10",
+      "mean_difference": 0.00019383044433800823,
+      "ci95_lower": 9.21865550291093e-05,
+      "ci95_upper": 0.0002998917736076055,
+      "p_difference_le_zero": 0.0004997501249375312,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "progression_minus_baseline",
+      "metric": "ndcg_at_10",
+      "mean_difference": 0.00022120374015969314,
+      "ci95_lower": 0.00017056886829779248,
+      "ci95_upper": 0.0002700624331599115,
+      "p_difference_le_zero": 0.0004997501249375312,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "progression_minus_baseline",
+      "metric": "mrr_at_10",
+      "mean_difference": 0.0003798354071768679,
+      "ci95_lower": 0.00027846715722691076,
+      "ci95_upper": 0.0004777489917290995,
+      "p_difference_le_zero": 0.0004997501249375312,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "progression_minus_baseline",
+      "metric": "hit_rate_at_10",
+      "mean_difference": 0.0008944298332711753,
+      "ci95_lower": 0.0006118126088774583,
+      "ci95_upper": 0.001180235683875561,
+      "p_difference_le_zero": 0.0004997501249375312,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "popularity_minus_baseline",
+      "metric": "recall_at_10",
+      "mean_difference": 0.0003173739682173336,
+      "ci95_lower": 0.00024222239954402859,
+      "ci95_upper": 0.0003922192991989789,
+      "p_difference_le_zero": 0.0004997501249375312,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "popularity_minus_baseline",
+      "metric": "ndcg_at_10",
+      "mean_difference": 0.0003426111172758839,
+      "ci95_lower": 0.0003078710975468679,
+      "ci95_upper": 0.0003800263596152942,
+      "p_difference_le_zero": 0.0004997501249375312,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "popularity_minus_baseline",
+      "metric": "mrr_at_10",
+      "mean_difference": 0.0006148891174295242,
+      "ci95_lower": 0.0005492530055284641,
+      "ci95_upper": 0.0006811103073235996,
+      "p_difference_le_zero": 0.0004997501249375312,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "popularity_minus_baseline",
+      "metric": "hit_rate_at_10",
+      "mean_difference": 0.0013626331755972419,
+      "ci95_lower": 0.0011527489186924534,
+      "ci95_upper": 0.0015644449610826153,
+      "p_difference_le_zero": 0.0004997501249375312,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "progression_minus_popularity",
+      "metric": "recall_at_10",
+      "mean_difference": -0.00012354352387932533,
+      "ci95_lower": -0.00021535967844925615,
+      "ci95_upper": -3.1646675382049327e-05,
+      "p_difference_le_zero": 0.9955022488755623,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "progression_minus_popularity",
+      "metric": "ndcg_at_10",
+      "mean_difference": -0.00012140737711619076,
+      "ci95_lower": -0.0001662884407288282,
+      "ci95_upper": -7.648794886600213e-05,
+      "p_difference_le_zero": 1.0,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "progression_minus_popularity",
+      "metric": "mrr_at_10",
+      "mean_difference": -0.00023505371025265632,
+      "ci95_lower": -0.00032485676744878144,
+      "ci95_upper": -0.00014246665947576038,
+      "p_difference_le_zero": 1.0,
+      "users": 619389,
+      "replicates": 2000
+    },
+    {
+      "comparison": "progression_minus_popularity",
+      "metric": "hit_rate_at_10",
+      "mean_difference": -0.0004682033423260665,
+      "ci95_lower": -0.0007217193072527927,
+      "ci95_upper": -0.00021795672832420338,
+      "p_difference_le_zero": 0.9995002498750625,
+      "users": 619389,
+      "replicates": 2000
+    }
+  ]
+}

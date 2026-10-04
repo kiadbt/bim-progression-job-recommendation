@@ -1,4 +1,4 @@
-"""Create publication figures from authoritative article-ready results."""
+"""Create publication figures from the released aggregate results."""
 from __future__ import annotations
 
 import os
@@ -13,18 +13,17 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGE = ROOT / "results" / "thesis_recommendation_package"
-OUTPUT = PACKAGE / "figures"
+RESULTS = ROOT / "results" / "olx"
+OUTPUT = ROOT / "figures"
 
 
 def save(fig: plt.Figure, stem: str) -> None:
     fig.savefig(OUTPUT / f"{stem}.png", dpi=400, bbox_inches="tight", facecolor="white")
-    fig.savefig(OUTPUT / f"{stem}.pdf", bbox_inches="tight", facecolor="white")
     plt.close(fig)
 
 
 def comparison_figure() -> None:
-    frame = pd.read_csv(PACKAGE / "article_primary_results.csv")
+    frame = pd.read_csv(RESULTS / "article_primary_results.csv")
     keep = [
         "LightGCN three-seed mean",
         "BPR ensemble",
@@ -53,15 +52,15 @@ def comparison_figure() -> None:
     ax.legend(frameon=False, ncol=3, loc="upper left")
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout()
-    save(fig, "figure_1_sampled_model_comparison")
+    save(fig, "figure_2_sampled_model_comparison")
 
 
 def temporal_figure() -> None:
     later = pd.read_csv(
-        ROOT / "results/E19B_diversity_controlled_progression_bootstrap/paired_bootstrap.csv"
+        RESULTS / "E19B_diversity_controlled_progression_bootstrap__paired_bootstrap.csv"
     )
     earlier = pd.read_csv(
-        ROOT / "results/E22B_frozen_progression_earlier_temporal_cohort_bootstrap/paired_bootstrap.csv"
+        RESULTS / "E22B_frozen_progression_earlier_temporal_cohort_bootstrap__paired_bootstrap.csv"
     )
     label_map = {
         "recall_at_10": "Recall@10", "ndcg_at_10": "NDCG@10",
@@ -84,11 +83,11 @@ def temporal_figure() -> None:
         ax.spines[["top", "right"]].set_visible(False)
     axes[0].invert_yaxis()
     fig.tight_layout()
-    save(fig, "figure_2_temporal_transfer_confidence_intervals")
+    save(fig, "figure_3_temporal_transfer_confidence_intervals")
 
 
 def exposure_figure() -> None:
-    frame = pd.read_csv(ROOT / "results/E23A_full_catalog_progression_subgroup_audit/popularity_exposure.csv")
+    frame = pd.read_csv(RESULTS / "E23A_full_catalog_progression_subgroup_audit__popularity_exposure.csv")
     order = ["head_top_10pct", "middle_10_50pct", "tail_bottom_50pct"]
     labels = ["Head 10%", "Middle 40%", "Tail 50%"]
     pivot = frame.pivot(index="popularity_band", columns="model", values="recommendation_exposure_share").loc[order]
@@ -106,7 +105,7 @@ def exposure_figure() -> None:
     for container in ax.containers:
         ax.bar_label(container, fmt="%.3f", padding=2, fontsize=8)
     fig.tight_layout()
-    save(fig, "figure_3_popularity_exposure_shift")
+    save(fig, "figure_4_popularity_exposure_shift")
 
 
 def main() -> None:
@@ -118,7 +117,7 @@ def main() -> None:
     comparison_figure()
     temporal_figure()
     exposure_figure()
-    print(f"created 3 PNG and 3 PDF figures in {OUTPUT}")
+    print(f"created 3 PNG figures in {OUTPUT}")
 
 
 if __name__ == "__main__":

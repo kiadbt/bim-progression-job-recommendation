@@ -17,6 +17,6 @@
   "notes": [
     "CPU sparse experiments do not report peak process memory because it was not instrumented prospectively.",
     "Throughput is conservative end-to-end wall-clock throughput and includes graph construction/evaluation overhead described by scope.",
-    "Artifact hashes verify exact local inputs, implementations, authoritative outputs, and vector figures; they do not imply public redistribution rights for the dataset."
+    "Artifact hashes verify the released inputs, implementations, aggregate outputs, and figures; they do not imply public redistribution rights for the dataset."
   ]
 }

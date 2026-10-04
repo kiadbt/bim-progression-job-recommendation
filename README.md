@@ -12,6 +12,8 @@ The release supports the reported experiments on:
 - diversity-constrained model selection;
 - frozen temporal transfer;
 - subgroup and popularity-exposure auditing;
+- matched-popularity full-catalog control;
+- paired BIM personalization controls;
 - behavior-aware LightGCN comparison; and
 - candidate-conditional Taobao and Tmall stress tests.
 
@@ -57,14 +59,17 @@ Key entry points include:
 - `src/evaluate_diversity_controlled_progression_full_catalog.py`
 - `src/evaluate_frozen_progression_temporal_cohort_olx.py`
 - `src/audit_full_catalog_progression_subgroups.py`
+- `src/evaluate_popularity_matched_control_full_catalog.py`
+- `src/bootstrap_full_catalog_three_way_control.py`
+- `src/bootstrap_bim_personalization_controls.py`
 - `src/train_behavior_aware_lightgcn_olx.py`
-- `src/create_q1_article_figures.py`
+- `src/create_publication_figures.py`
 
 Because the raw datasets cannot be redistributed, exact end-to-end reruns require users to obtain the source datasets independently and construct the processed inputs described in `DATA.md`. The aggregate result files in this repository are the shareable evidence package associated with the manuscript.
 
 ## Claim boundaries
 
-The released evidence supports modest, temporally robust progression-aware gains on the OLX protocols. It does not establish universal cross-domain superiority, causal psychological inference, cold-start improvement, or state-of-the-art performance across incomparable datasets. Taobao and Tmall are reported as candidate-conditional stress tests rather than direct job-domain replications.
+The released evidence supports modest, temporally robust progression-aware gains over RP3Beta on the OLX protocols. A matched full-catalog control shows that interaction popularity is stronger than progression at the same fusion weight. Paired BIM controls do not establish a consistent individualized advantage, and direct tail-safety constraints select unmodified RP3Beta. The evidence therefore does not establish a uniquely progression-specific mechanism, universal cross-domain superiority, causal psychological inference, cold-start improvement, or state-of-the-art performance across incomparable datasets. Taobao and Tmall are reported as candidate-conditional boundary tests rather than direct job-domain replications.
 
 ## Citation
 

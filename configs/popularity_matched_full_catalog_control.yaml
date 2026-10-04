@@ -1,0 +1,23 @@
+experiment:
+  name: E24A_popularity_matched_full_catalog_control
+  purpose: distinguish progression-specific gain from interaction-popularity reranking
+protocol:
+  cutoff: 1582401299
+  users: 619389
+  relevant_pairs: 6110047
+  catalog_items: 185395
+  full_catalog: true
+  seen_items_removed: true
+backbone:
+  model: RP3Beta
+  alpha: 1.0
+  beta: 0.3
+  topk: 200
+controls:
+  auxiliary_weight: 0.1
+  progression_signal: normalized_log_successful_contact_count
+  matched_signal: normalized_log_interaction_count
+  identical_graph_candidates_normalization_and_users: true
+statistics:
+  paired_user_bootstrap_replicates: 2000
+  seed: 20261004

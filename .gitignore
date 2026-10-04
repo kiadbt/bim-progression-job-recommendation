@@ -30,6 +30,7 @@ __pycache__/
 .venv/
 venv/
 .ipynb_checkpoints/
+.matplotlib/
 
 # Local outputs and logs
 logs/
@@ -43,3 +44,12 @@ outputs/
 Thumbs.db
 .vscode/
 .idea/
+
+# Manuscripts, review files, and office-document residue
+*.docx
+*.doc
+*.pdf
+~$*
+manuscript*/
+supplement*/
+supervisor_reviews/
