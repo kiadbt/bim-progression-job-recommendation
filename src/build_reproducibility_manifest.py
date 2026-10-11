@@ -46,7 +46,7 @@ def main() -> None:
         for path in public_files()
     ]
     with HASH_FILE.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["relative_path", "bytes", "sha256"])
+        writer = csv.DictWriter(handle, fieldnames=["relative_path", "bytes", "sha256"], lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -59,7 +59,7 @@ def main() -> None:
         "resource_file": "runtime_resources.csv",
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
     }
-    SUMMARY_FILE.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+    SUMMARY_FILE.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps(summary, indent=2))
 
 

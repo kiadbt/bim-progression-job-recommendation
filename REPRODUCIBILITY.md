@@ -23,3 +23,11 @@ Sampled and full-catalog metrics must not be compared as though they were produc
 
 The later-cohort progression gain is statistically reliable but small. No minimum operationally meaningful effect was prespecified, so the released evidence does not establish that the gain exceeds a practical deployment threshold. Such a threshold requires prospective definition and controlled online evaluation.
 
+## Confidence-interval provenance
+
+`E19B_diversity_controlled_progression_bootstrap__paired_bootstrap.csv` and `E24B_popularity_matched_bootstrap__paired_bootstrap.csv` are separate paired bootstrap analyses. They preserve the same later-cohort progression-minus-RP3Beta point estimate but produce slightly different interval endpoints because they use separate resampling runs. The E24B record accompanies the matched-popularity control analysis; E19B accompanies the original progression analysis and temporal-comparison figure. Report the interval from the specified analysis rather than combining endpoints from different files.
+
+## Release verification
+
+The 11 October 2026 release audit records source-script equivalence, numerical agreement with local aggregate outputs, and completion of local Python import dependencies. Original experimental outputs are retained without numerical alteration. The public checksums describe the released files, not the restricted raw data or user-level arrays. The audit does not substitute for an authorized end-to-end rerun, a new GPU benchmark, or an online evaluation.
+

@@ -49,6 +49,8 @@ GPU experiments reported in the manuscript used an NVIDIA GeForce RTX 2060 with 
 
 ## Reproducing reported evidence
 
+The release was audited against the local experiment sources and aggregate outputs on 11 October 2026. The supervisor-review matched-popularity and individualized-BIM control analyses are included. Four supporting Python modules were added to complete the local import dependencies. See `reproducibility/release_audit_20261011.json` for the checked records. This maintenance update does not change the reported numerical results or represent a new experimental run.
+
 The configuration files specify the frozen protocols and output locations used in the study. The released aggregate outputs allow independent checking of the manuscript tables and figures without exposing user-level data.
 
 Key entry points include:
@@ -63,9 +65,12 @@ Key entry points include:
 - `src/bootstrap_full_catalog_three_way_control.py`
 - `src/bootstrap_bim_personalization_controls.py`
 - `src/train_behavior_aware_lightgcn_olx.py`
+- `src/evaluate_p3ltr_degree_recency_olx.py`
 - `src/create_publication_figures.py`
 
 Because the raw datasets cannot be redistributed, exact end-to-end reruns require users to obtain the source datasets independently and construct the processed inputs described in `DATA.md`. The aggregate result files in this repository are the shareable evidence package associated with the manuscript.
+
+The original `configs/behavior_aware_lightgcn.yaml` records the one-epoch feasibility configuration. The completed three-seed, 30-epoch comparator is recorded separately in `configs/behavior_aware_lightgcn_final.json` and `results/olx/E21E_behavior_aware_lightgcn_aggregate__aggregate_summary.json`; the feasibility file must not be mistaken for the final benchmark configuration.
 
 ## Claim boundaries
 

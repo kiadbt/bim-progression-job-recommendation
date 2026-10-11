@@ -1,0 +1,27 @@
+{
+  "experiment": "E21 three-seed behavior-aware LightGCN",
+  "status": "completed_sampled_protocol_baseline",
+  "model_scope": "MB-HGCN-style comparator; not an MB-HGCN reproduction",
+  "seeds": [
+    20260827,
+    20260828,
+    20260829
+  ],
+  "validated_protocol": {
+    "training_cutoff_timestamp": 1582312306,
+    "training_users": 2617884,
+    "items": 185395,
+    "global_edges": 34193207,
+    "successful_contact_edges": 903281,
+    "dimension": 8,
+    "epochs": 30,
+    "global_sample_per_epoch": 125000,
+    "success_sample_per_epoch": 125000,
+    "auxiliary_weight": 0.25,
+    "relation_weight": 0.25,
+    "initial_global_gate": 0.5,
+    "evaluation_seed": 20260827,
+    "evaluation_negatives": 999
+  },
+  "source_record": "results/olx/E21E_behavior_aware_lightgcn_aggregate__aggregate_summary.json"
+}
