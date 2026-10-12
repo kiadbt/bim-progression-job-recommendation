@@ -1,5 +1,5 @@
 experiment:
-  name: E24A_popularity_matched_full_catalog_control
+  name: popularity_matched_full_catalog_control
   purpose: distinguish progression-specific gain from interaction-popularity reranking
 protocol:
   cutoff: 1582401299

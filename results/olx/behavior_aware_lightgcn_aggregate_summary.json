@@ -1,5 +1,5 @@
 {
-  "experiment": "E21 three-seed behavior-aware LightGCN",
+  "experiment": "three-seed behavior-aware LightGCN",
   "status": "completed_sampled_protocol_baseline",
   "model_scope": "MB-HGCN-style comparator; not an MB-HGCN reproduction",
   "seeds": [

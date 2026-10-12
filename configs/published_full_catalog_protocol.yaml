@@ -1,5 +1,5 @@
 experiment:
-  name: E17A_published_OLX_full_catalog
+  name: published_OLX_full_catalog
 split:
   raw_timestamp_percentile: 80
   cutoff: 1582401299

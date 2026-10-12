@@ -1,6 +1,6 @@
 {
   "status": "completed_frozen_temporal_transfer",
-  "selection": "gamma and lambda transferred unchanged from E19; no cohort tuning",
+  "selection": "gamma and lambda transferred unchanged from the diversity-constrained validation analysis; no cohort tuning",
   "start_cutoff": 1582239167,
   "end_cutoff_exclusive": 1582401299,
   "training_pairs": 30979208,

@@ -1,5 +1,5 @@
 experiment:
-  name: E18A_deployable_progression_full_catalog
+  name: deployable_progression_full_catalog
 context:
   target_pathway_used: false
   progression_signal: log1p_item_successful_contact_count_before_cutoff

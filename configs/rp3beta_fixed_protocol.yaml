@@ -1,5 +1,5 @@
 experiment:
-  name: E14A_RP3Beta_fixed_candidate_protocol
+  name: RP3Beta_fixed_candidate_protocol
   purpose: same-protocol comparison with a strong published OLX graph baseline
 training:
   graph: all distinct user-item pairs strictly before validation start

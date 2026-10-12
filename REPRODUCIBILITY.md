@@ -1,6 +1,6 @@
 # Reproducibility Notes
 
-## Frozen design
+## Evaluation design
 
 Model selection uses validation data only. Test outcomes are not used for feature construction, hyperparameter selection, or candidate generation. Full-catalog, sampled, temporal-transfer, and cross-domain protocols remain separate because their candidate universes are not interchangeable.
 
@@ -10,8 +10,8 @@ Model selection uses validation data only. Test outcomes are not used for featur
 - Aggregate results and paired intervals are in `results/`.
 - Package, hardware, and runtime records are in `reproducibility/`.
 - Deterministic figure generation is implemented in `src/create_publication_figures.py`.
-- The matched-popularity control is recorded under `results/olx/E24A_*` and `E24B_*`.
-- The paired individualized-BIM controls are recorded under `results/olx/E24C_*`.
+- The matched-popularity control is recorded in `results/olx/popularity_matched_full_catalog_control_*` and `popularity_matched_bootstrap_*`.
+- The paired individualized-BIM controls are recorded in `results/olx/bim_personalization_bootstrap_*`.
 
 ## Restricted artifacts
 
@@ -25,9 +25,8 @@ The later-cohort progression gain is statistically reliable but small. No minimu
 
 ## Confidence-interval provenance
 
-`E19B_diversity_controlled_progression_bootstrap__paired_bootstrap.csv` and `E24B_popularity_matched_bootstrap__paired_bootstrap.csv` are separate paired bootstrap analyses. They preserve the same later-cohort progression-minus-RP3Beta point estimate but produce slightly different interval endpoints because they use separate resampling runs. The E24B record accompanies the matched-popularity control analysis; E19B accompanies the original progression analysis and temporal-comparison figure. Report the interval from the specified analysis rather than combining endpoints from different files.
+`diversity_controlled_progression_bootstrap_paired_bootstrap.csv` and `popularity_matched_bootstrap_paired_bootstrap.csv` are separate paired bootstrap analyses. They preserve the same later-cohort progression-minus-RP3Beta point estimate but produce slightly different interval endpoints because they use separate resampling runs. The popularity-matched bootstrap accompanies the matched-popularity control analysis; the diversity-controlled bootstrap accompanies the progression analysis and temporal-comparison figure. Report the interval from the specified analysis rather than combining endpoints from different files.
 
-## Release verification
+## Verification
 
-The 11 October 2026 release audit records source-script equivalence, numerical agreement with local aggregate outputs, and completion of local Python import dependencies. Original experimental outputs are retained without numerical alteration. The public checksums describe the released files, not the restricted raw data or user-level arrays. The audit does not substitute for an authorized end-to-end rerun, a new GPU benchmark, or an online evaluation.
-
+Implementation dependencies and aggregate-result consistency checks are documented in `reproducibility/verification.json`. SHA-256 checksums identify the public files; they do not cover restricted raw data or user-level arrays. Numerical results are unchanged. These checks validate the distributed files and are not a substitute for an end-to-end experimental rerun or online evaluation.

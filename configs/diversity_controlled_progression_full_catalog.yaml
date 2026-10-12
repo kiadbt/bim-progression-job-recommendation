@@ -1,5 +1,5 @@
 experiment:
-  name: E19A_diversity_controlled_progression_full_catalog
+  name: diversity_controlled_progression_full_catalog
 selection:
   objective: maximize_validation_NDCG_at_10
   constraint: catalog_coverage_at_least_95_percent_of_RP3Beta

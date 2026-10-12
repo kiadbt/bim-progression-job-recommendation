@@ -1,5 +1,5 @@
 experiment:
-  name: E24C_bim_personalization_bootstrap
+  name: bim_personalization_bootstrap
   purpose: test whether individualized BIM scores outperform non-personalized controls
 protocol:
   partition: holdout30

@@ -1,5 +1,5 @@
 experiment:
-  name: E21_behavior_aware_lightgcn
+  name: behavior_aware_lightgcn
   status: feasibility_implementation
   domain: olx_jobs
 

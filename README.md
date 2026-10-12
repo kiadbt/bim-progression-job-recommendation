@@ -47,9 +47,9 @@ python -m pip install -r requirements-gpu-lock.txt
 
 GPU experiments reported in the manuscript used an NVIDIA GeForce RTX 2060 with 6 GB memory. The sparse RP3Beta evaluations can be run independently of the trainable LightGCN comparator when suitable processed inputs are available.
 
-## Reproducing reported evidence
+## Reproducing the experiments
 
-The release was audited against the local experiment sources and aggregate outputs on 11 October 2026. The supervisor-review matched-popularity and individualized-BIM control analyses are included. Four supporting Python modules were added to complete the local import dependencies. See `reproducibility/release_audit_20261011.json` for the checked records. This maintenance update does not change the reported numerical results or represent a new experimental run.
+The experiments include matched-popularity and individualized-BIM control analyses. Aggregate results, evaluation configurations, and implementation dependencies are documented in `reproducibility/verification.json`. SHA-256 checksums are provided in `reproducibility/artifact_sha256.csv`.
 
 The configuration files specify the frozen protocols and output locations used in the study. The released aggregate outputs allow independent checking of the manuscript tables and figures without exposing user-level data.
 
@@ -68,11 +68,11 @@ Key entry points include:
 - `src/evaluate_p3ltr_degree_recency_olx.py`
 - `src/create_publication_figures.py`
 
-Because the raw datasets cannot be redistributed, exact end-to-end reruns require users to obtain the source datasets independently and construct the processed inputs described in `DATA.md`. The aggregate result files in this repository are the shareable evidence package associated with the manuscript.
+Because the raw datasets cannot be redistributed, exact end-to-end reruns require users to obtain the source datasets independently and construct the processed inputs described in `DATA.md`. The aggregate result files in this repository are the aggregate records supporting the reported analyses.
 
-The original `configs/behavior_aware_lightgcn.yaml` records the one-epoch feasibility configuration. The completed three-seed, 30-epoch comparator is recorded separately in `configs/behavior_aware_lightgcn_final.json` and `results/olx/E21E_behavior_aware_lightgcn_aggregate__aggregate_summary.json`; the feasibility file must not be mistaken for the final benchmark configuration.
+The original `configs/behavior_aware_lightgcn.yaml` records the one-epoch feasibility configuration. The completed three-seed, 30-epoch comparator is recorded separately in `configs/behavior_aware_lightgcn_final.json` and `results/olx/behavior_aware_lightgcn_aggregate_summary.json`; the feasibility file must not be mistaken for the final benchmark configuration.
 
-## Claim boundaries
+## Interpretation and limitations
 
 The released evidence supports modest, temporally robust progression-aware gains over RP3Beta on the OLX protocols. A matched full-catalog control shows that interaction popularity is stronger than progression at the same fusion weight. Paired BIM controls do not establish a consistent individualized advantage, and direct tail-safety constraints select unmodified RP3Beta. The evidence therefore does not establish a uniquely progression-specific mechanism, universal cross-domain superiority, causal psychological inference, cold-start improvement, or state-of-the-art performance across incomparable datasets. Taobao and Tmall are reported as candidate-conditional boundary tests rather than direct job-domain replications.
 

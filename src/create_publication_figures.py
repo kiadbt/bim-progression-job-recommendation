@@ -57,10 +57,10 @@ def comparison_figure() -> None:
 
 def temporal_figure() -> None:
     later = pd.read_csv(
-        RESULTS / "E19B_diversity_controlled_progression_bootstrap__paired_bootstrap.csv"
+        RESULTS / "diversity_controlled_progression_bootstrap_paired_bootstrap.csv"
     )
     earlier = pd.read_csv(
-        RESULTS / "E22B_frozen_progression_earlier_temporal_cohort_bootstrap__paired_bootstrap.csv"
+        RESULTS / "frozen_progression_earlier_temporal_cohort_bootstrap_paired_bootstrap.csv"
     )
     label_map = {
         "recall_at_10": "Recall@10", "ndcg_at_10": "NDCG@10",
@@ -87,7 +87,7 @@ def temporal_figure() -> None:
 
 
 def exposure_figure() -> None:
-    frame = pd.read_csv(RESULTS / "E23A_full_catalog_progression_subgroup_audit__popularity_exposure.csv")
+    frame = pd.read_csv(RESULTS / "full_catalog_progression_subgroup_audit_popularity_exposure.csv")
     order = ["head_top_10pct", "middle_10_50pct", "tail_bottom_50pct"]
     labels = ["Head 10%", "Middle 40%", "Tail 50%"]
     pivot = frame.pivot(index="popularity_band", columns="model", values="recommendation_exposure_share").loc[order]

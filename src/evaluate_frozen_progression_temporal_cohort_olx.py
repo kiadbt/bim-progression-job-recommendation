@@ -1,7 +1,7 @@
 """Evaluate frozen progression-aware RP3Beta on an earlier temporal cohort.
 
 No hyperparameter is selected here. Gamma=0.1 and lambda=0 are transferred
-from E19 unchanged. The cohort trains before START and evaluates unseen pairs
+unchanged from the diversity-constrained validation analysis. The cohort trains before START and evaluates unseen pairs
 in [START, END), using all eligible warm users and the full catalog.
 """
 from __future__ import annotations
@@ -65,7 +65,7 @@ def main() -> None:
     )
     summary = {
         "status": "completed_frozen_temporal_transfer",
-        "selection": "gamma and lambda transferred unchanged from E19; no cohort tuning",
+        "selection": "gamma and lambda transferred unchanged from the diversity-constrained validation analysis; no cohort tuning",
         "start_cutoff": args.start_cutoff,
         "end_cutoff_exclusive": args.end_cutoff,
         "training_pairs": int(ui.nnz),

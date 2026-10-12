@@ -45,11 +45,11 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Manuscripts, review files, and office-document residue
+# Office documents and temporary document files
 *.docx
 *.doc
 *.pdf
 ~$*
 manuscript*/
 supplement*/
-supervisor_reviews/
+private_documents/
