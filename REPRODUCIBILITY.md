@@ -36,7 +36,7 @@ The driver refuses comparisons if the smoke test, source hashes, input manifest 
 
 ## Protocol and provenance
 
-`configs/comparison_contract.json` records temporal boundaries, eligibility, shared budgets, fixed comparator parameters and inference scope. It is a retrospective analysis specification, not prospective preregistration. The later full-catalog interval starts before calibrated BIM availability, so those probabilities are explicitly prohibited for that task.
+`configs/comparison_contract.json` records temporal boundaries, eligibility, shared budgets, fixed comparator parameters and inference scope. It is a retrospective analysis specification, not prospective preregistration. The later full-catalog interval starts before the calibrated history-based predictor is available, so those probabilities are explicitly prohibited for that task.
 
 Source files retain their numerical routines; public packaging replaces the local backup helper with a checksum-only utility, excludes document-preservation operations and provides a portable comparison launcher. `reproducibility/source_provenance.json` records source/public checksums. Historical execution records refer to the code used for those executions, not automatically to the repackaged files. Recreate all local manifests and smoke records before rerunning; do not copy historical approvals onto new inputs.
 

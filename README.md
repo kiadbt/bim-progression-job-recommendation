@@ -7,15 +7,19 @@ Code, experiment settings, regression tests and aggregate results for an empiric
 Two distinct evaluation tasks are reported:
 
 - **Conditional sampled ranking:** 21,046 development cases and 12,783 test cases. Each case ranks a subsequent qualifying contact on another job against 999 distinct unobserved alternatives. Eligibility conditions on a later qualifying contact; it is not a deployment population.
-- **Full-catalog ranking:** 619,032 later-period users and 178,696 cutoff-observed jobs. Four item-prior families share development users, weight grids and a development coverage constraint. The calibrated BIM model is not used here because its selection boundary occurs after this task starts.
+- **Full-catalog ranking:** 619,032 later-period users and 178,696 cutoff-observed jobs. Four item-prior families share development users, weight grids and a development coverage constraint. The calibrated history-based nonprogression predictor is not used here because its selection boundary occurs after this task starts.
 
 Training-prefix features admit resolved previous outcomes only after their maturity window has finished. Models and ranking controls use shared temporal rules, candidates and deterministic item-ID tie breaking. All periods were inspected during the research; the results are retrospective, not untouched independent validation.
 
 ## Main findings
 
-History features improve source-outcome probability prediction relative to the context control, but the tested personalized risk does not establish extra ranking value over matched simpler controls. Changing to a common reference normalization leaves personalized BIM NDCG@10 essentially unchanged.
+History features improve source-outcome probability prediction relative to the context control, but the tested personalized risk does not establish extra ranking value over matched simpler controls. Changing to a common reference normalization leaves personalized-risk fusion NDCG@10 essentially unchanged.
 
 In the separate full-catalog task, successful-contact count fusion increases RP3Beta NDCG@10 from 0.074749 to 0.074970 (approximately 0.30% relative). Popularity, recency and the fixed published P3LTR degree-recency component are more accurate. Tail-target results are sparse and descriptive. These results do not establish a new state-of-the-art architecture, causal user benefit or psychological assessment.
+
+## Terminology
+
+The history-based nonprogression predictor is the MLP that estimates a source-attempt outcome. Personalized-risk fusion uses that estimate in candidate ranking. Existing `BIM` identifiers in filenames refer to this predictor; `actual` denotes its personalized-risk variant in result keys. These identifiers are retained to keep code, configurations and recorded outputs aligned; they do not designate an additional architecture.
 
 ## Contents
 
