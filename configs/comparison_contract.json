@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "status": "documented_retrospective_evaluation_rules",
+  "scope": "Model-independent evaluation rules established after inspecting earlier results; not a prospective preregistration",
+  "temporal_rules": {
+    "full_catalog_development": [
+      1582239167,
+      1582401299
+    ],
+    "full_catalog_later": [
+      1582401299,
+      1582675200
+    ],
+    "interval_convention": "Half-open [start, end); training events must precede start",
+    "earlier_cohort": "Development-period evidence only; it includes parameter-selection users",
+    "independence_limit": "Later outcomes are temporally disjoint from development but have already been inspected; no fresh independent validation claim",
+    "sampled_model_fit_cutoff": 1582312306,
+    "sampled_validation_end": 1582493743,
+    "sampled_followup_seconds": 86400,
+    "sampled_development": "Validation is used for model selection, calibration, and ranking-weight selection; no within-validation subgroup is called independent confirmation",
+    "component_fit_gate": "All learned windows, weights, scalers and calibration must be fit before their evaluation boundary; current MLP checkpoints were selected using validation ending 1582493743 and are permitted only for sampled test queries after that boundary",
+    "full_catalog_bim_gate": "Do not reuse current MLP checkpoints in the full-catalog cohort starting 1582401299, or current 1582312306-fitted windows in development starting 1582239167; full-catalog BIM requires a separate earlier-fit pipeline"
+  },
+  "eligibility_rules": {
+    "catalog": "Only IDs with first observed event strictly before graph training cutoff",
+    "availability_limit": "Observed-item proxy only; actual listing publication and expiry metadata are not established",
+    "full_catalog": "Training users with at least one eligible unseen post-cutoff pair; relevance restricted to the same eligible catalog; report removed relevance and users",
+    "sampled": "Conditional first alternative-job successful contact within 24 hours; complete follow-up before partition end; target unobserved by user at or before query",
+    "sampled_seen_mask": "All user-item events at or before source timestamp, including source item",
+    "negative_semantics": "Unobserved comparison jobs, not proven negative preferences; no exclusion based on future outcomes",
+    "shared_inputs": "Every comparator must load the identical materialized case order, candidate array and manifest hashes; no method-specific candidate generation",
+    "coverage_denominator": "Number of cutoff-observed eligible catalog items, not maximum item ID plus one"
+  },
+  "ranking_rules": {
+    "order": "Descending finite score, then ascending item ID across the entire cutoff boundary",
+    "sparse_similarity": "Apply global deterministic top-k selection before storing each sparse row",
+    "fusion": "All eligible unseen sparse-support items plus top K eligible outside-support auxiliary items; normalize base on eligible unseen support",
+    "gamma_zero": "Use ascending item ID for zero-score outside-support ties; do not use auxiliary magnitude when its coefficient is zero",
+    "sentinels": "Missing recommendations are excluded from exposure and coverage; precision retains its K denominator",
+    "implementation_gate": "New comparison drivers must use protocol_primitives and materialized manifests, not the archived samplers or top-k routines"
+  },
+  "selection_and_comparators": {
+    "backbone_reference": "RP3Beta alpha=1 beta=0.3 topK=200 is a fixed reference, not a claim of an exhaustively tuned optimum",
+    "fusion_families": [
+      "interaction popularity",
+      "successful contact count",
+      "smoothed successful contact rate",
+      "interaction recency"
+    ],
+    "weight_grid_per_family": [
+      0,
+      0.01,
+      0.025,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1
+    ],
+    "validation_users": "A single materialized sample of 30000 eligible full-catalog development users, seed 10, shared across all methods; unused development users are not independent confirmation",
+    "budget_rule": "Equal weight grids and validation users per family; the rate-shrinkage strength and recency half-life below are fixed before comparative scoring and are not selected on later outcomes",
+    "prior_definitions": {
+      "interaction_popularity": "log1p of all pre-cutoff interaction events per item, divided by eligible-catalog maximum",
+      "successful_contact_count": "log1p of pre-cutoff contact_chat and contact_phone_click_2 or 3 event counts, divided by eligible-catalog maximum; no maturity mechanism is claimed for this score",
+      "smoothed_contact_rate": "(successful contact events + 20 times global successful-contact event share) divided by (all interaction events + 20), then divided by eligible-catalog maximum",
+      "interaction_recency": "exp(-ln(2) times elapsed seconds since last pre-cutoff item event divided by 86400), then divided by eligible-catalog maximum",
+      "fixed_parameter_limit": "Shrinkage strength 20 interactions and recency half-life 24 hours are documented fixed reference choices; comparisons do not establish superiority to optimally tuned versions of these families"
+    },
+    "p3ltr_scope": "Published degree-recency component is an external-parameter reference, not full P3LTR or a locally optimally tuned architecture",
+    "primary_selection": "Maximum development NDCG@10 subject to coverage at least 95% of same-case RP3Beta; ties by Recall@10 then smaller weight; zero weight remains eligible",
+    "accuracy_frontier": "Show development trade-offs and apply development-selected operating points unchanged to later evaluation; never choose weights using later metrics",
+    "neural_scope": "No broad architectural superiority claim from unequal resource-constrained comparators"
+  },
+  "statistics": {
+    "primary_reported_metric": "Later full-catalog per-user NDCG@10",
+    "primary_difference_family": [
+      "contact count minus RP3Beta",
+      "contact count minus popularity",
+      "contact count minus contact rate",
+      "contact count minus recency",
+      "contact count minus P3LTR degree-recency"
+    ],
+    "uncertainty": "Paired user bootstrap, 5000 replicates, seed 20261020; report pointwise 95% intervals as pointwise rather than simultaneous",
+    "multiplicity": "For the five primary differences also report Bonferroni simultaneous bootstrap intervals at 99% each, targeting a 95% family confidence level; bootstrap coverage remains approximate",
+    "secondary": "Sampled metrics, auxiliary BIM controls, coverage, exposure, and subgroups are exploratory; label intervals accordingly",
+    "repeated_users": "Do not treat repeated cases or folds from the same user as independent observations when pooling",
+    "selection_limit": "Intervals are conditional on recorded settings and observed users; multiplicity adjustment does not remove research-selection bias from previously inspected outcomes",
+    "equivalence": "Failure to exclude zero is not equivalence; no equivalence or noninferiority claim without a justified margin",
+    "operational_effect": "No validated operational threshold exists; report absolute and relative effects without claiming practical benefit from statistical significance alone"
+  },
+  "exposure_and_efficiency": {
+    "popularity_bands": "Define using training-only item interaction counts and deterministic item-ID ties; save membership before later scoring",
+    "report": "Accuracy, catalog coverage, head/tail exposure, and tail-target quality together; disclose overlapping user subgroups",
+    "efficiency": "Record runtime, hardware, batch size, graph rebuild and serving costs separately; no deployment-efficiency superiority claim without matched measurements"
+  }
+}

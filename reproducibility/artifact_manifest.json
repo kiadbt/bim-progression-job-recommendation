@@ -1,0 +1,289 @@
+{
+  "algorithm": "SHA-256",
+  "files": {
+    ".gitattributes": {
+      "sha256": "f81644cfc9d74823fe1e0da6f6cae680a6dd6fac7a7b009943394a826354edd0",
+      "bytes": 65
+    },
+    ".gitignore": {
+      "sha256": "6fc43488e0c23a1e41a908e0d605aa1bbf9911d574802b15322c70c312a6fd95",
+      "bytes": 428
+    },
+    "configs/comparison_contract.json": {
+      "sha256": "0c93760544e330253f6b1a652d73825c02c2082bf8dba90ecdb728a6df2e042c",
+      "bytes": 7799
+    },
+    "configs/mlp_context.json": {
+      "sha256": "0a9e107e91c0acacb75f14bdd6ee9d0074e1a43f448deabc9687f9551ec4f712",
+      "bytes": 3096
+    },
+    "configs/mlp_history.json": {
+      "sha256": "e32ec2ab5d5a7ac08b99ff7a96a2809cfec5b4f53deb2c24c3da3cf5ac1de8c5",
+      "bytes": 3561
+    },
+    "configs/normalization.json": {
+      "sha256": "4d0eaac501359ab494dc68f62c4a057a893e9b1b82f6c2b54f816e9f4c6c994e",
+      "bytes": 4105
+    },
+    "DATA.md": {
+      "sha256": "ad49aef334b318a91f7b8e90d02e1482e7fe26b98bd54ad72829c2f927ee7aed",
+      "bytes": 2157
+    },
+    "experiments/olx/src/analyse_and_calibrate_contact_models.py": {
+      "sha256": "ae0c416d2fa26f73974539fd583f27e6617537a0857b4031c26f50266cc4239d",
+      "bytes": 14433
+    },
+    "experiments/olx/src/analyse_downstream_statistics.py": {
+      "sha256": "d8e650153720e14e4a9207971e7ad83ec0fb0f0f8b160c91f6aa2cf306b9a78a",
+      "bytes": 10628
+    },
+    "experiments/olx/src/approved_evaluation_inputs.py": {
+      "sha256": "f9e14731b99c6128852a2cf62fe146f01666e261dc6be8356988d55058bf2761",
+      "bytes": 2504
+    },
+    "experiments/olx/src/artifact_hash.py": {
+      "sha256": "adf2ab884fb2f535747e9c3d3676750c4fd671ef28fef0aeee8e6eb7fc4108b4",
+      "bytes": 262
+    },
+    "experiments/olx/src/calibrate_conditional_contact_scores.py": {
+      "sha256": "fb986aa7c9e755bbf93ccfd2f217876c1dafa5ca14000454611c2d433a4fe2b4",
+      "bytes": 5577
+    },
+    "experiments/olx/src/calibrated_score_gate.py": {
+      "sha256": "57eb8859f887fa95529ad80e61b01c3548840484d7890c41bcdd74856ca95d86",
+      "bytes": 3350
+    },
+    "experiments/olx/src/calibration_core.py": {
+      "sha256": "de985bd22e6dafc1e92c98b8e0a2c5fe8a5fc42cadd996cbd2d2ed7f2f0eaa00",
+      "bytes": 2263
+    },
+    "experiments/olx/src/comparison_adapter.py": {
+      "sha256": "231abf98c075a63100fa6004372c81f60e5e2b6f0000f7bde8f47e4f5acdb028",
+      "bytes": 3601
+    },
+    "experiments/olx/src/diagnose_risk_transfer.py": {
+      "sha256": "88c40bba7c995a5d9e56d40df38cb7f1a6ded9ecb94b3f819255c1fcd57effc7",
+      "bytes": 14331
+    },
+    "experiments/olx/src/materialize_development_users.py": {
+      "sha256": "02f6923ef8758f7e466bfa8093daf317404ddb41ec7de9b6c188b48ac823590e",
+      "bytes": 1404
+    },
+    "experiments/olx/src/materialize_evaluation_contract.py": {
+      "sha256": "7b8a865a8b94027e8dc5cb5349ede10a880cb0ccf0f8e0eb8b3eee85bbe9eff0",
+      "bytes": 7072
+    },
+    "experiments/olx/src/observable_history.py": {
+      "sha256": "3fb37adc758fb1220211e9200a06ed401934f881d397df19ab171e1f03aee0be",
+      "bytes": 4048
+    },
+    "experiments/olx/src/paired_bootstrap.py": {
+      "sha256": "b8a3f12ce52f147419870a4922792a60f8e3de7bbe1ce7de919805ff66b4196b",
+      "bytes": 3118
+    },
+    "experiments/olx/src/prepare_protocol.py": {
+      "sha256": "e15aa26918368101b4187ef6b19def01f3f7fe0575d4f755fcd1581e8f573a73",
+      "bytes": 1237
+    },
+    "experiments/olx/src/prepare_risk_comparison_inputs.py": {
+      "sha256": "5018a71bdc3bb8f11fc401e2aac79afc9b4c77920e7908445b26d14ab6249a7b",
+      "bytes": 5375
+    },
+    "experiments/olx/src/protocol_primitives.py": {
+      "sha256": "33b20b668ee3169f718127b055def625952a05b5612ad75f3767b33e9ed9ecb4",
+      "bytes": 6035
+    },
+    "experiments/olx/src/ranking_driver_core.py": {
+      "sha256": "9cf41ddcb2669fbffd366b33da749217991de339e99ad80c68fb260c8c8ec259",
+      "bytes": 13472
+    },
+    "experiments/olx/src/rebuild_features.py": {
+      "sha256": "81c39a755c92eec183f692d03e0d61308e1ae382c233f4e5c903c92cee125efe",
+      "bytes": 9795
+    },
+    "experiments/olx/src/rerun_contact_models.py": {
+      "sha256": "1b014729a5e22f58aa2a99b2c811c2a4d15baca9a2550ed7b50217237a314230",
+      "bytes": 6313
+    },
+    "experiments/olx/src/run_comparisons.py": {
+      "sha256": "0892d93c39a8cc63f5c5e044e18a770ce2e542b64f4c636559bc0462f6790806",
+      "bytes": 1482
+    },
+    "experiments/olx/src/run_downstream_batch.py": {
+      "sha256": "a21149447ece1a69a2a1d745cc91999a3a63e963d53023c5d49a65f6a825e99d",
+      "bytes": 3115
+    },
+    "experiments/olx/src/run_normalization_experiment.py": {
+      "sha256": "7d80cc0d95352b9253a79344d3abd9db7972a60d85b5c9c4177634d2e8ed6fd3",
+      "bytes": 21265
+    },
+    "experiments/olx/src/run_protocol_tests.py": {
+      "sha256": "c4488a52f41f96daf5a760b266bfa97b26fc51feca8ae2efcca2552cd195bc13",
+      "bytes": 1088
+    },
+    "experiments/olx/src/run_repaired_ranking.py": {
+      "sha256": "529588beeaf5b211623c90f68511dd529a37f7d1a94653d2669f0120e0e3b853",
+      "bytes": 20216
+    },
+    "experiments/olx/src/verify_contact_calibration.py": {
+      "sha256": "dbdf03ada68a806630cb9c78ee0e750a057b6bd3a7f97e472b4ff53e84a78112",
+      "bytes": 6140
+    },
+    "experiments/olx/src/verify_downstream_statistics.py": {
+      "sha256": "be5e23a0a657030bcac3316b185f052fa06a8f5b78cf26d95cc004bb0b505ff8",
+      "bytes": 2185
+    },
+    "experiments/olx/src/verify_evaluation_contract.py": {
+      "sha256": "448c4a45c7797f3c1dbb0fd309562240e113870b41e82ffa04c22e37eb52f10a",
+      "bytes": 8019
+    },
+    "experiments/olx/src/verify_normalization_experiment.py": {
+      "sha256": "a1dfc715548cc09e42c8df0e95311d3a436160a0e1aa52b3a32b4349a05a6d89",
+      "bytes": 7828
+    },
+    "experiments/olx/src/verify_rebuilt_features.py": {
+      "sha256": "71c3a7628c6d140e3c9b21cdfdea4b422e40c3ddf4eebbd47775c6bc4b117894",
+      "bytes": 3810
+    },
+    "experiments/olx/tests/test_calibration.py": {
+      "sha256": "fce50f1b2f508c0dc98b5b72f0e5920493474655718228de04a10f08d6a2feec",
+      "bytes": 1828
+    },
+    "experiments/olx/tests/test_comparison_adapter.py": {
+      "sha256": "693c01fdf0eab5d1c784d505e9b961f532f64f115bcd8ad08ad23a12b1fae000",
+      "bytes": 2006
+    },
+    "experiments/olx/tests/test_feature_parameters.py": {
+      "sha256": "9e5b74a52d724010edf6365941a9cc335d68338c9292e37d97fa2fda8c39f94a",
+      "bytes": 2131
+    },
+    "experiments/olx/tests/test_normalization_experiment.py": {
+      "sha256": "497ddd9bb59dfb984340b9dd64c4e6888d327333e021ff53076e52181f42a089",
+      "bytes": 3274
+    },
+    "experiments/olx/tests/test_observable_history.py": {
+      "sha256": "27877973a4abecca7b0dddb0448fcebaf2f6ad0b825f3499d0c5247b77d04e62",
+      "bytes": 4769
+    },
+    "experiments/olx/tests/test_paired_bootstrap.py": {
+      "sha256": "91cab474641a830a95a74332646af822b90fb48e139ce8bcefaa7eddd78d557e",
+      "bytes": 1815
+    },
+    "experiments/olx/tests/test_protocol_primitives.py": {
+      "sha256": "4cdc033bdf277e2ed91b7f53c5126ea82bcbeecfd2916329da69bc62d311f306",
+      "bytes": 4671
+    },
+    "experiments/olx/tests/test_ranking_driver.py": {
+      "sha256": "3cb62858a2574975883926d759fe2cc665b39027187cc74f2828bf0ebcf0b5e7",
+      "bytes": 3429
+    },
+    "README.md": {
+      "sha256": "8092bd899694b4d138b1c1dc4d863565ff21c731a7e7f4278fb4bccedaf2643b",
+      "bytes": 3608
+    },
+    "reproducibility/environment.json": {
+      "sha256": "7dbeb30563637e3eecc6fae0395286de16540e7a7730291dcc19bfa083466be0",
+      "bytes": 1735
+    },
+    "reproducibility/release_checks.json": {
+      "sha256": "4710e453a0771041f4087dc247df7c4e4a22883c2d0696c725f29c3586e59dd0",
+      "bytes": 424
+    },
+    "reproducibility/source_provenance.json": {
+      "sha256": "e704b138aa686e04277af7678e81728f0f4eca5e12d3c91217d547cb784858a1",
+      "bytes": 17840
+    },
+    "REPRODUCIBILITY.md": {
+      "sha256": "4707d8fed1f6584e5278f844d38e2444f0389541d584d51da6ab8f9cbf1ddaa7",
+      "bytes": 5430
+    },
+    "requirements.txt": {
+      "sha256": "39732357a4de2d1ac321a2bcdeff6e87c84aa2c3b86d4088200e31ae02dfcbaa",
+      "bytes": 105
+    },
+    "results/olx/conditional_calibration.json": {
+      "sha256": "7f7ac6bb13fb6e61e2af4598074a0b990452db481c276d7ba70bd21c139e2d15",
+      "bytes": 8164
+    },
+    "results/olx/conditional_prediction_loss.json": {
+      "sha256": "5f6fc39bb254982943ee67c5c37da2bb6c068859690812119d8dc16ef4b15a9e",
+      "bytes": 843
+    },
+    "results/olx/feature_build.json": {
+      "sha256": "c8748d8b7bdda3c6bdf4a43de76f2c0a1fc8853df612128382003efa40e54ed8",
+      "bytes": 2987
+    },
+    "results/olx/full_catalog_development_grid.json": {
+      "sha256": "e6f7cfff6f66ab59b5cc7e25e9279cf32a0631c35f4714bd953c3b251d31ad83",
+      "bytes": 14943
+    },
+    "results/olx/full_catalog_selected_settings.json": {
+      "sha256": "3df1d381cf281497a2d30eaa6ad0e68795ffa8fea3f1e7d43167e95c0bbd1b7a",
+      "bytes": 1029
+    },
+    "results/olx/normalization.json": {
+      "sha256": "53389e5887784f43f5c020ff90874c2d58931f5ea75e4e997c0d2cc8d0d2581f",
+      "bytes": 18794
+    },
+    "results/olx/normalization_development_grid.json": {
+      "sha256": "d6548772aa4b783711dffec627734f44ae1a78b2386bc3b31279e246c3798275",
+      "bytes": 17952
+    },
+    "results/olx/normalization_selected_settings.json": {
+      "sha256": "a98bf9488c41920b66dcf8df43de5ee510ed56f5e90f3cd053844cdc4e6d0c82",
+      "bytes": 649
+    },
+    "results/olx/populations.json": {
+      "sha256": "c26106dff717ea44e12538106a41cb3a31c1e5f3af736c0943c4b497e85a6186",
+      "bytes": 2157
+    },
+    "results/olx/prediction_and_ranking_statistics.json": {
+      "sha256": "df22ed4b7a4fe080d2b1919f11d39ba93a23a3495e94d47e836988e9c4f88cd3",
+      "bytes": 76617
+    },
+    "results/olx/risk_transfer_diagnostics.json": {
+      "sha256": "e0295da7fde68c40892ccdc86ad164628408c8dced07b8ee300a52dbf31f367d",
+      "bytes": 47892
+    },
+    "RESULTS.md": {
+      "sha256": "4fae4b0234288b601f99fbc32ebbf9f113ecdd88b438c7f10a1000ad9a2e13f6",
+      "bytes": 2605
+    },
+    "src/ablate_bim_mlp_olx.py": {
+      "sha256": "1e1781b315e006b906b71a9bc1e5b369022c017dd834debd0bd3ea6785e027dd",
+      "bytes": 5878
+    },
+    "src/build_recommendation_pilot_olx.py": {
+      "sha256": "b5a17143236e1b1a4b67988132c4b68750c09d7d9be70da77abe90fc657e7926",
+      "bytes": 8664
+    },
+    "src/build_sequences_olx.py": {
+      "sha256": "bd326d634fba04a232c01ab96f5d10b1750da6e71f2f072da00cee146ecea6f3",
+      "bytes": 9052
+    },
+    "src/confirm_bim_evidence_cross_outcome_olx.py": {
+      "sha256": "4c10caf8b96a023491261d0dde2e6074278e23c2d8f672f1a304739127c50996",
+      "bytes": 7171
+    },
+    "src/evaluate_full_catalog_published_protocol_olx.py": {
+      "sha256": "a9b846d3de9da45a7878df79863c1417c67951cc88fa671271d5cb479eb862d8",
+      "bytes": 1110
+    },
+    "src/generate_bim_features_successful_contact_olx.py": {
+      "sha256": "4d8231de9617e15842c00a17ccee869c9a61ba047fc32e104dede6257ddc01f0",
+      "bytes": 12771
+    },
+    "src/preprocess_olx.py": {
+      "sha256": "2d5f0e3bd48dd38201d179c746cb1fb3c7ecb7e9da09e248b5fb8e052842f965",
+      "bytes": 8458
+    },
+    "src/train_bim_e8a_olx.py": {
+      "sha256": "e7c5e6497ec0ad52c02c08781ba7d877d75a51784ebb7a6ff61637150957a7b5",
+      "bytes": 20062
+    },
+    "tools/verify_release.py": {
+      "sha256": "c4a31ffac7f8ea408417aa0f9c229d95aa11d000f72dd3c50a2863d9542925ab",
+      "bytes": 1172
+    }
+  }
+}

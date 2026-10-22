@@ -1,0 +1,624 @@
+{
+  "status": "completed_retrospective_normalization_experiment",
+  "n_development": 21046,
+  "n_test": 12783,
+  "reference_risk": 0.5099306282514899,
+  "selected_weights": {
+    "current__actual": 0.25,
+    "current__context": 0.25,
+    "current__fixed_global": 0.25,
+    "current__fixed_pathway": 0.25,
+    "current__shuffled_pathway": 0.25,
+    "current__zero": 0.25,
+    "reference__actual": 0.25,
+    "reference__context": 0.25,
+    "reference__fixed_global": 0.25,
+    "reference__fixed_pathway": 0.25,
+    "reference__shuffled_pathway": 0.25,
+    "reference__zero": 0.25
+  },
+  "test_metrics": [
+    {
+      "model": "rp3beta",
+      "gamma": 0.0,
+      "recall": 0.3061879058124071,
+      "ndcg": 0.2303464240918235,
+      "MRR": 0.20608322809683993,
+      "HR": 0.3061879058124071,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.37052040246584395,
+      "unique_recommended_items": 65033,
+      "tail_exposure": 0.029985136509426583,
+      "head_exposure": 0.6466009543925526
+    },
+    {
+      "model": "current__actual",
+      "gamma": 0.25,
+      "recall": 0.3098646640068841,
+      "ndcg": 0.23208314196112695,
+      "MRR": 0.2072545506246515,
+      "HR": 0.3098646640068841,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.3556159482218348,
+      "unique_recommended_items": 62417,
+      "tail_exposure": 0.010670421653758899,
+      "head_exposure": 0.6975279668309473
+    },
+    {
+      "model": "current__context",
+      "gamma": 0.25,
+      "recall": 0.309942892904639,
+      "ndcg": 0.23204026795084215,
+      "MRR": 0.2071740866155323,
+      "HR": 0.309942892904639,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.3556615275926116,
+      "unique_recommended_items": 62425,
+      "tail_exposure": 0.010654775874207932,
+      "head_exposure": 0.6975123210513964
+    },
+    {
+      "model": "current__fixed_global",
+      "gamma": 0.25,
+      "recall": 0.31009935070014866,
+      "ndcg": 0.23213856085438617,
+      "MRR": 0.2072576859892044,
+      "HR": 0.31009935070014866,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.3502204902061327,
+      "unique_recommended_items": 61470,
+      "tail_exposure": 0.010232339826331847,
+      "head_exposure": 0.714135961824298
+    },
+    {
+      "model": "current__fixed_pathway",
+      "gamma": 0.25,
+      "recall": 0.3093170617226003,
+      "ndcg": 0.23193356578444282,
+      "MRR": 0.20720770641563885,
+      "HR": 0.3093170617226003,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.35171321459907245,
+      "unique_recommended_items": 61732,
+      "tail_exposure": 0.010467026519596339,
+      "head_exposure": 0.7077290150981773
+    },
+    {
+      "model": "current__shuffled_pathway",
+      "gamma": 0.25,
+      "recall": 0.30916060392709066,
+      "ndcg": 0.2318321573126056,
+      "MRR": 0.20713220932066276,
+      "HR": 0.30916060392709066,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.35610592645768524,
+      "unique_recommended_items": 62503,
+      "tail_exposure": 0.010584369866228585,
+      "head_exposure": 0.6969099585386842
+    },
+    {
+      "model": "current__zero",
+      "gamma": 0.25,
+      "recall": 0.3105687240866776,
+      "ndcg": 0.23264891273228222,
+      "MRR": 0.20776934023237711,
+      "HR": 0.3105687240866776,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.33888262172540706,
+      "unique_recommended_items": 59480,
+      "tail_exposure": 0.008761636548541032,
+      "head_exposure": 0.7473988891496519
+    },
+    {
+      "model": "reference__actual",
+      "gamma": 0.25,
+      "recall": 0.31009935070014866,
+      "ndcg": 0.23207955175000664,
+      "MRR": 0.20718218889422832,
+      "HR": 0.31009935070014866,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.3537813785480691,
+      "unique_recommended_items": 62095,
+      "tail_exposure": 0.010686067433309864,
+      "head_exposure": 0.6984667136040054
+    },
+    {
+      "model": "reference__context",
+      "gamma": 0.25,
+      "recall": 0.309942892904639,
+      "ndcg": 0.23201271306571244,
+      "MRR": 0.2071360276359103,
+      "HR": 0.309942892904639,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.3537813785480691,
+      "unique_recommended_items": 62095,
+      "tail_exposure": 0.010701713212860831,
+      "head_exposure": 0.6983728389266995
+    },
+    {
+      "model": "reference__fixed_global",
+      "gamma": 0.25,
+      "recall": 0.31009935070014866,
+      "ndcg": 0.23213856085438617,
+      "MRR": 0.2072576859892044,
+      "HR": 0.31009935070014866,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.3502204902061327,
+      "unique_recommended_items": 61470,
+      "tail_exposure": 0.010232339826331847,
+      "head_exposure": 0.714135961824298
+    },
+    {
+      "model": "reference__fixed_pathway",
+      "gamma": 0.25,
+      "recall": 0.30947351951811,
+      "ndcg": 0.23195785115629639,
+      "MRR": 0.20719221585215486,
+      "HR": 0.30947351951811,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.3508984833464374,
+      "unique_recommended_items": 61589,
+      "tail_exposure": 0.010412266291167958,
+      "head_exposure": 0.7088555112258468
+    },
+    {
+      "model": "reference__shuffled_pathway",
+      "gamma": 0.25,
+      "recall": 0.3093170617226003,
+      "ndcg": 0.23185034583638472,
+      "MRR": 0.20710470503359496,
+      "HR": 0.3093170617226003,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.35403776250868857,
+      "unique_recommended_items": 62140,
+      "tail_exposure": 0.01052178674802472,
+      "head_exposure": 0.6979816944379253
+    },
+    {
+      "model": "reference__zero",
+      "gamma": 0.25,
+      "recall": 0.31064695298443246,
+      "ndcg": 0.2330399713235713,
+      "MRR": 0.20825532173807226,
+      "HR": 0.31064695298443246,
+      "cases": 12783,
+      "sampled_list_catalog_coverage": 0.3207192424708577,
+      "unique_recommended_items": 56292,
+      "tail_exposure": 0.007416099507157944,
+      "head_exposure": 0.7750058671673317
+    },
+    {
+      "model": "p3ltr_degree_recency",
+      "gamma": 0.0,
+      "recall": 0.3174528670891027,
+      "ndcg": 0.23902101604045378,
+      "MRR": 0.21396631066309546,
+      "HR": 0.3174528670891027,
+      "cases": 12783
+    }
+  ],
+  "test_metrics_including_fixed_weight": [
+    {
+      "model": "rp3beta",
+      "gamma": 0.0,
+      "recall": 0.3061879058124071,
+      "ndcg": 0.2303464240918235,
+      "MRR": 0.20608322809683993,
+      "HR": 0.3061879058124071,
+      "cases": 12783
+    },
+    {
+      "model": "current__actual",
+      "gamma": 0.25,
+      "recall": 0.3098646640068841,
+      "ndcg": 0.23208314196112695,
+      "MRR": 0.2072545506246515,
+      "HR": 0.3098646640068841,
+      "cases": 12783
+    },
+    {
+      "model": "current__context",
+      "gamma": 0.25,
+      "recall": 0.309942892904639,
+      "ndcg": 0.23204026795084215,
+      "MRR": 0.2071740866155323,
+      "HR": 0.309942892904639,
+      "cases": 12783
+    },
+    {
+      "model": "current__fixed_global",
+      "gamma": 0.25,
+      "recall": 0.31009935070014866,
+      "ndcg": 0.23213856085438617,
+      "MRR": 0.2072576859892044,
+      "HR": 0.31009935070014866,
+      "cases": 12783
+    },
+    {
+      "model": "current__fixed_pathway",
+      "gamma": 0.25,
+      "recall": 0.3093170617226003,
+      "ndcg": 0.23193356578444282,
+      "MRR": 0.20720770641563885,
+      "HR": 0.3093170617226003,
+      "cases": 12783
+    },
+    {
+      "model": "current__shuffled_pathway",
+      "gamma": 0.25,
+      "recall": 0.30916060392709066,
+      "ndcg": 0.2318321573126056,
+      "MRR": 0.20713220932066276,
+      "HR": 0.30916060392709066,
+      "cases": 12783
+    },
+    {
+      "model": "current__zero",
+      "gamma": 0.25,
+      "recall": 0.3105687240866776,
+      "ndcg": 0.23264891273228222,
+      "MRR": 0.20776934023237711,
+      "HR": 0.3105687240866776,
+      "cases": 12783
+    },
+    {
+      "model": "reference__actual",
+      "gamma": 0.25,
+      "recall": 0.31009935070014866,
+      "ndcg": 0.23207955175000664,
+      "MRR": 0.20718218889422832,
+      "HR": 0.31009935070014866,
+      "cases": 12783
+    },
+    {
+      "model": "reference__context",
+      "gamma": 0.25,
+      "recall": 0.309942892904639,
+      "ndcg": 0.23201271306571244,
+      "MRR": 0.2071360276359103,
+      "HR": 0.309942892904639,
+      "cases": 12783
+    },
+    {
+      "model": "reference__fixed_global",
+      "gamma": 0.25,
+      "recall": 0.31009935070014866,
+      "ndcg": 0.23213856085438617,
+      "MRR": 0.2072576859892044,
+      "HR": 0.31009935070014866,
+      "cases": 12783
+    },
+    {
+      "model": "reference__fixed_pathway",
+      "gamma": 0.25,
+      "recall": 0.30947351951811,
+      "ndcg": 0.23195785115629639,
+      "MRR": 0.20719221585215486,
+      "HR": 0.30947351951811,
+      "cases": 12783
+    },
+    {
+      "model": "reference__shuffled_pathway",
+      "gamma": 0.25,
+      "recall": 0.3093170617226003,
+      "ndcg": 0.23185034583638472,
+      "MRR": 0.20710470503359496,
+      "HR": 0.3093170617226003,
+      "cases": 12783
+    },
+    {
+      "model": "reference__zero",
+      "gamma": 0.25,
+      "recall": 0.31064695298443246,
+      "ndcg": 0.2330399713235713,
+      "MRR": 0.20825532173807226,
+      "HR": 0.31064695298443246,
+      "cases": 12783
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "model": "reference__actual",
+      "comparator": "current__actual",
+      "family": "primary",
+      "mean_delta_ndcg": -3.590211120330009e-06,
+      "relative_percent": -0.001546950411818949,
+      "cases_improved": 34,
+      "cases_worsened": 30,
+      "cases_unchanged": 12719,
+      "pointwise_95_ci": [
+        -0.00016301673807804122,
+        0.00014898283394204498
+      ],
+      "family_adjusted_ci": [
+        -0.00021696727822471438,
+        0.0002106903725122
+      ],
+      "individual_confidence_level": 0.9916666666666667
+    },
+    {
+      "model": "reference__actual",
+      "comparator": "reference__context",
+      "family": "primary",
+      "mean_delta_ndcg": 6.683868429414294e-05,
+      "relative_percent": 0.028808199090026746,
+      "cases_improved": 11,
+      "cases_worsened": 10,
+      "cases_unchanged": 12762,
+      "pointwise_95_ci": [
+        -1.1688867882836832e-05,
+        0.00016252607286237135
+      ],
+      "family_adjusted_ci": [
+        -3.328021304163714e-05,
+        0.00020540553102123453
+      ],
+      "individual_confidence_level": 0.9916666666666667
+    },
+    {
+      "model": "reference__actual",
+      "comparator": "reference__fixed_global",
+      "family": "primary",
+      "mean_delta_ndcg": -5.900910437952433e-05,
+      "relative_percent": -0.025419776948018145,
+      "cases_improved": 101,
+      "cases_worsened": 90,
+      "cases_unchanged": 12592,
+      "pointwise_95_ci": [
+        -0.0004098739196221858,
+        0.000292279644604845
+      ],
+      "family_adjusted_ci": [
+        -0.0005408144358056003,
+        0.0004199246323045933
+      ],
+      "individual_confidence_level": 0.9916666666666667
+    },
+    {
+      "model": "reference__actual",
+      "comparator": "reference__fixed_pathway",
+      "family": "primary",
+      "mean_delta_ndcg": 0.00012170059371028321,
+      "relative_percent": 0.05246668440133104,
+      "cases_improved": 76,
+      "cases_worsened": 67,
+      "cases_unchanged": 12640,
+      "pointwise_95_ci": [
+        -0.00014108228007223873,
+        0.00038439644150098455
+      ],
+      "family_adjusted_ci": [
+        -0.00024097408353795983,
+        0.00048000165533645896
+      ],
+      "individual_confidence_level": 0.9916666666666667
+    },
+    {
+      "model": "reference__actual",
+      "comparator": "reference__shuffled_pathway",
+      "family": "primary",
+      "mean_delta_ndcg": 0.00022920591362190793,
+      "relative_percent": 0.0988594227863076,
+      "cases_improved": 109,
+      "cases_worsened": 94,
+      "cases_unchanged": 12580,
+      "pointwise_95_ci": [
+        -0.00016572408171240931,
+        0.000642502825863203
+      ],
+      "family_adjusted_ci": [
+        -0.00030062276683528137,
+        0.0007577486881140207
+      ],
+      "individual_confidence_level": 0.9916666666666667
+    },
+    {
+      "model": "reference__actual",
+      "comparator": "reference__zero",
+      "family": "primary",
+      "mean_delta_ndcg": -0.0009604195735646311,
+      "relative_percent": -0.41212654125806936,
+      "cases_improved": 165,
+      "cases_worsened": 247,
+      "cases_unchanged": 12371,
+      "pointwise_95_ci": [
+        -0.001539071777796108,
+        -0.0003672705267767572
+      ],
+      "family_adjusted_ci": [
+        -0.0017360651771353578,
+        -0.00015283940684420534
+      ],
+      "individual_confidence_level": 0.9916666666666667
+    },
+    {
+      "model": "reference__actual",
+      "comparator": "rp3beta",
+      "family": "secondary",
+      "mean_delta_ndcg": 0.0017331276581831335,
+      "relative_percent": 0.7524005050290049,
+      "cases_improved": 300,
+      "cases_worsened": 186,
+      "cases_unchanged": 12297,
+      "pointwise_95_ci": [
+        0.0010743229388751824,
+        0.0023922075106419644
+      ]
+    },
+    {
+      "model": "reference__actual",
+      "comparator": "p3ltr_degree_recency",
+      "family": "secondary",
+      "mean_delta_ndcg": -0.0069414642904471885,
+      "relative_percent": -2.9041229953069734,
+      "cases_improved": 768,
+      "cases_worsened": 1055,
+      "cases_unchanged": 10960,
+      "pointwise_95_ci": [
+        -0.00906237280783456,
+        -0.004856521757812509
+      ]
+    },
+    {
+      "model": "reference__actual",
+      "comparator": "current__actual",
+      "family": "fixed_weight",
+      "mean_delta_ndcg": -3.590211120330009e-06,
+      "relative_percent": -0.001546950411818949,
+      "cases_improved": 34,
+      "cases_worsened": 30,
+      "cases_unchanged": 12719,
+      "pointwise_95_ci": [
+        -0.00016301673807804122,
+        0.00014898283394204498
+      ]
+    },
+    {
+      "model": "reference__context",
+      "comparator": "current__context",
+      "family": "fixed_weight",
+      "mean_delta_ndcg": -2.7554885129670263e-05,
+      "relative_percent": -0.011875044522663532,
+      "cases_improved": 34,
+      "cases_worsened": 32,
+      "cases_unchanged": 12717,
+      "pointwise_95_ci": [
+        -0.00018687029445207528,
+        0.00012647776699776058
+      ]
+    },
+    {
+      "model": "reference__fixed_global",
+      "comparator": "current__fixed_global",
+      "family": "fixed_weight",
+      "mean_delta_ndcg": 0.0,
+      "relative_percent": 0.0,
+      "cases_improved": 0,
+      "cases_worsened": 0,
+      "cases_unchanged": 12783,
+      "pointwise_95_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "reference__fixed_pathway",
+      "comparator": "current__fixed_pathway",
+      "family": "fixed_weight",
+      "mean_delta_ndcg": 2.428537185356672e-05,
+      "relative_percent": 0.010470831063813052,
+      "cases_improved": 15,
+      "cases_worsened": 11,
+      "cases_unchanged": 12757,
+      "pointwise_95_ci": [
+        -6.760503695965532e-05,
+        0.00011264180408664192
+      ]
+    },
+    {
+      "model": "reference__shuffled_pathway",
+      "comparator": "current__shuffled_pathway",
+      "family": "fixed_weight",
+      "mean_delta_ndcg": 1.818852377913659e-05,
+      "relative_percent": 0.00784555688476424,
+      "cases_improved": 45,
+      "cases_worsened": 33,
+      "cases_unchanged": 12705,
+      "pointwise_95_ci": [
+        -0.00020656286772239413,
+        0.0002336264920015815
+      ]
+    },
+    {
+      "model": "reference__zero",
+      "comparator": "current__zero",
+      "family": "fixed_weight",
+      "mean_delta_ndcg": 0.00039105859128903906,
+      "relative_percent": 0.16808958472934915,
+      "cases_improved": 180,
+      "cases_worsened": 131,
+      "cases_unchanged": 12472,
+      "pointwise_95_ci": [
+        -8.365434377027655e-05,
+        0.0008398956228447956
+      ]
+    }
+  ],
+  "top10_changes_vs_reference_actual": {
+    "rp3beta": {
+      "identical_ordered_lists": 509,
+      "identical_membership": 3636,
+      "mean_top10_overlap": 8.30313697879997
+    },
+    "current__actual": {
+      "identical_ordered_lists": 9083,
+      "identical_membership": 11345,
+      "mean_top10_overlap": 9.874833763592271
+    },
+    "current__context": {
+      "identical_ordered_lists": 8354,
+      "identical_membership": 11001,
+      "mean_top10_overlap": 9.841273566455449
+    },
+    "current__fixed_global": {
+      "identical_ordered_lists": 4395,
+      "identical_membership": 7868,
+      "mean_top10_overlap": 9.358288351717125
+    },
+    "current__fixed_pathway": {
+      "identical_ordered_lists": 5180,
+      "identical_membership": 8515,
+      "mean_top10_overlap": 9.472346084643668
+    },
+    "current__shuffled_pathway": {
+      "identical_ordered_lists": 4234,
+      "identical_membership": 7764,
+      "mean_top10_overlap": 9.292341390909803
+    },
+    "current__zero": {
+      "identical_ordered_lists": 2038,
+      "identical_membership": 6009,
+      "mean_top10_overlap": 9.039740280059455
+    },
+    "reference__context": {
+      "identical_ordered_lists": 11092,
+      "identical_membership": 12159,
+      "mean_top10_overlap": 9.944066338105296
+    },
+    "reference__fixed_global": {
+      "identical_ordered_lists": 4395,
+      "identical_membership": 7868,
+      "mean_top10_overlap": 9.358288351717125
+    },
+    "reference__fixed_pathway": {
+      "identical_ordered_lists": 5505,
+      "identical_membership": 8684,
+      "mean_top10_overlap": 9.487053117421576
+    },
+    "reference__shuffled_pathway": {
+      "identical_ordered_lists": 4625,
+      "identical_membership": 7816,
+      "mean_top10_overlap": 9.284127356645545
+    },
+    "reference__zero": {
+      "identical_ordered_lists": 984,
+      "identical_membership": 4197,
+      "mean_top10_overlap": 8.672846749589299
+    }
+  },
+  "scope": "Retrospective conditional sampled OLX benchmark; no new holdout or model training",
+  "coverage_caution": "Coverage is over top-ten lists from sampled candidates, not full-catalog recommendations or verified available vacancies.",
+  "uncertainty": {
+    "replicates": 5000,
+    "seed": 20261021,
+    "method": "Paired user bootstrap with shared resamples",
+    "primary_intervals": "Pointwise 95% and Bonferroni 99.1666667% percentile intervals for the six planned contrasts; approximately 95% family coverage.",
+    "secondary": "RP3Beta, P3LTR component, and fixed-weight contrasts receive exploratory pointwise 95% intervals only.",
+    "interpretation": "All inference remains exploratory because these test cases were inspected before this experiment."
+  },
+  "completed_at_utc": "2026-10-20T16:47:39.941851+00:00",
+  "elapsed_seconds": 246.65500979998615,
+  "peak_process_working_set_bytes": 4006223872,
+  "neural_retraining": false,
+  "graph_reconstructed_unchanged": true
+}

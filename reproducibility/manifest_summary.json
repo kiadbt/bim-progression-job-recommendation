@@ -1,9 +1,0 @@
-{
-  "status": "completed",
-  "hash_algorithm": "SHA-256",
-  "artifacts_hashed": 68,
-  "hash_file": "artifact_sha256.csv",
-  "environment_file": "environment.json",
-  "resource_file": "runtime_resources.csv",
-  "generated_at_utc": "2026-10-12T08:16:26.891752+00:00"
-}

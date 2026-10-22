@@ -1,0 +1,311 @@
+{
+  "scope": "Public source adaptations and aggregate artifacts; private observations and documents excluded",
+  "files": [
+    {
+      "module": "ablate_bim_mlp_olx.py",
+      "source_sha256": "1e1781b315e006b906b71a9bc1e5b369022c017dd834debd0bd3ea6785e027dd",
+      "public_path": "src/ablate_bim_mlp_olx.py",
+      "public_sha256": "1e1781b315e006b906b71a9bc1e5b369022c017dd834debd0bd3ea6785e027dd",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "analyse_and_calibrate_contact_models.py",
+      "source_sha256": "1ccd66b9b901644faa9d4308ed687c05086f124711e8ffb7456d82debae7bf50",
+      "public_path": "experiments/olx/src/analyse_and_calibrate_contact_models.py",
+      "public_sha256": "ae0c416d2fa26f73974539fd583f27e6617537a0857b4031c26f50266cc4239d",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "analyse_downstream_statistics.py",
+      "source_sha256": "8d99b6e278cb2727d210b4193d3dfdc8e7ab05211ca4ae275903f1c63deaa33a",
+      "public_path": "experiments/olx/src/analyse_downstream_statistics.py",
+      "public_sha256": "d8e650153720e14e4a9207971e7ad83ec0fb0f0f8b160c91f6aa2cf306b9a78a",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "approved_evaluation_inputs.py",
+      "source_sha256": "c194af6c84eaef44c6e495b2d9722360176c95c421621bafb9101289da0aa160",
+      "public_path": "experiments/olx/src/approved_evaluation_inputs.py",
+      "public_sha256": "f9e14731b99c6128852a2cf62fe146f01666e261dc6be8356988d55058bf2761",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "build_recommendation_pilot_olx.py",
+      "source_sha256": "b5a17143236e1b1a4b67988132c4b68750c09d7d9be70da77abe90fc657e7926",
+      "public_path": "src/build_recommendation_pilot_olx.py",
+      "public_sha256": "b5a17143236e1b1a4b67988132c4b68750c09d7d9be70da77abe90fc657e7926",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "build_sequences_olx.py",
+      "source_sha256": "bd326d634fba04a232c01ab96f5d10b1750da6e71f2f072da00cee146ecea6f3",
+      "public_path": "src/build_sequences_olx.py",
+      "public_sha256": "bd326d634fba04a232c01ab96f5d10b1750da6e71f2f072da00cee146ecea6f3",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "calibrate_conditional_contact_scores.py",
+      "source_sha256": "16b5471d746586f8c3d77ddde7dc0cb60cf5c7b572cc741de5e335b96923ddca",
+      "public_path": "experiments/olx/src/calibrate_conditional_contact_scores.py",
+      "public_sha256": "fb986aa7c9e755bbf93ccfd2f217876c1dafa5ca14000454611c2d433a4fe2b4",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "calibrated_score_gate.py",
+      "source_sha256": "dbc2b06b8f3c3f59263fe758f6aa802312efc78c52371395d8905b49b66e65de",
+      "public_path": "experiments/olx/src/calibrated_score_gate.py",
+      "public_sha256": "57eb8859f887fa95529ad80e61b01c3548840484d7890c41bcdd74856ca95d86",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "calibration_core.py",
+      "source_sha256": "de985bd22e6dafc1e92c98b8e0a2c5fe8a5fc42cadd996cbd2d2ed7f2f0eaa00",
+      "public_path": "experiments/olx/src/calibration_core.py",
+      "public_sha256": "de985bd22e6dafc1e92c98b8e0a2c5fe8a5fc42cadd996cbd2d2ed7f2f0eaa00",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "comparison_adapter.py",
+      "source_sha256": "231abf98c075a63100fa6004372c81f60e5e2b6f0000f7bde8f47e4f5acdb028",
+      "public_path": "experiments/olx/src/comparison_adapter.py",
+      "public_sha256": "231abf98c075a63100fa6004372c81f60e5e2b6f0000f7bde8f47e4f5acdb028",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "confirm_bim_evidence_cross_outcome_olx.py",
+      "source_sha256": "4c10caf8b96a023491261d0dde2e6074278e23c2d8f672f1a304739127c50996",
+      "public_path": "src/confirm_bim_evidence_cross_outcome_olx.py",
+      "public_sha256": "4c10caf8b96a023491261d0dde2e6074278e23c2d8f672f1a304739127c50996",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "diagnose_risk_transfer.py",
+      "source_sha256": "9639f7a5d80a6bdbd945da600eb3ad202251712dd6eb46c33278fd31d9ad331f",
+      "public_path": "experiments/olx/src/diagnose_risk_transfer.py",
+      "public_sha256": "88c40bba7c995a5d9e56d40df38cb7f1a6ded9ecb94b3f819255c1fcd57effc7",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "generate_bim_features_successful_contact_olx.py",
+      "source_sha256": "4d8231de9617e15842c00a17ccee869c9a61ba047fc32e104dede6257ddc01f0",
+      "public_path": "src/generate_bim_features_successful_contact_olx.py",
+      "public_sha256": "4d8231de9617e15842c00a17ccee869c9a61ba047fc32e104dede6257ddc01f0",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "materialize_development_users.py",
+      "source_sha256": "5528b6bf2fd0994c7d478723ce1176104545d82939360937861a127dd4227aea",
+      "public_path": "experiments/olx/src/materialize_development_users.py",
+      "public_sha256": "02f6923ef8758f7e466bfa8093daf317404ddb41ec7de9b6c188b48ac823590e",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "materialize_evaluation_contract.py",
+      "source_sha256": "0c10aabc9286d390a042c48458a04cd89a81af726eb0d9cf37fa4fa709cea588",
+      "public_path": "experiments/olx/src/materialize_evaluation_contract.py",
+      "public_sha256": "7b8a865a8b94027e8dc5cb5349ede10a880cb0ccf0f8e0eb8b3eee85bbe9eff0",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "observable_history.py",
+      "source_sha256": "3fb37adc758fb1220211e9200a06ed401934f881d397df19ab171e1f03aee0be",
+      "public_path": "experiments/olx/src/observable_history.py",
+      "public_sha256": "3fb37adc758fb1220211e9200a06ed401934f881d397df19ab171e1f03aee0be",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "paired_bootstrap.py",
+      "source_sha256": "b8a3f12ce52f147419870a4922792a60f8e3de7bbe1ce7de919805ff66b4196b",
+      "public_path": "experiments/olx/src/paired_bootstrap.py",
+      "public_sha256": "b8a3f12ce52f147419870a4922792a60f8e3de7bbe1ce7de919805ff66b4196b",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "prepare_risk_comparison_inputs.py",
+      "source_sha256": "3ec839858a96a0928f8c8c9692878cb4db8e3156ff1240759f1953e0d17dc8d8",
+      "public_path": "experiments/olx/src/prepare_risk_comparison_inputs.py",
+      "public_sha256": "5018a71bdc3bb8f11fc401e2aac79afc9b4c77920e7908445b26d14ab6249a7b",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "preprocess_olx.py",
+      "source_sha256": "2d5f0e3bd48dd38201d179c746cb1fb3c7ecb7e9da09e248b5fb8e052842f965",
+      "public_path": "src/preprocess_olx.py",
+      "public_sha256": "2d5f0e3bd48dd38201d179c746cb1fb3c7ecb7e9da09e248b5fb8e052842f965",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "protocol_primitives.py",
+      "source_sha256": "33b20b668ee3169f718127b055def625952a05b5612ad75f3767b33e9ed9ecb4",
+      "public_path": "experiments/olx/src/protocol_primitives.py",
+      "public_sha256": "33b20b668ee3169f718127b055def625952a05b5612ad75f3767b33e9ed9ecb4",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "ranking_driver_core.py",
+      "source_sha256": "959cd041c00b9e57d03eaec4c0dedb1e9fa2888ec6b072819c46e78fce58e4e6",
+      "public_path": "experiments/olx/src/ranking_driver_core.py",
+      "public_sha256": "9cf41ddcb2669fbffd366b33da749217991de339e99ad80c68fb260c8c8ec259",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "rebuild_features.py",
+      "source_sha256": "a921df605eddb4f7bcbe6d1b31e81a442f8d49a37f528c6b7803253df89ce287",
+      "public_path": "experiments/olx/src/rebuild_features.py",
+      "public_sha256": "81c39a755c92eec183f692d03e0d61308e1ae382c233f4e5c903c92cee125efe",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "rerun_contact_models.py",
+      "source_sha256": "4b3660ef32165f40b46c0a190682c378f2f6e90d06dee33946ced23b7dd96772",
+      "public_path": "experiments/olx/src/rerun_contact_models.py",
+      "public_sha256": "1b014729a5e22f58aa2a99b2c811c2a4d15baca9a2550ed7b50217237a314230",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "run_normalization_experiment.py",
+      "source_sha256": "578e98799c8c598d0bc3de29223eadcc87d6c327d1cd0e8c08b49fa5bba18cae",
+      "public_path": "experiments/olx/src/run_normalization_experiment.py",
+      "public_sha256": "7d80cc0d95352b9253a79344d3abd9db7972a60d85b5c9c4177634d2e8ed6fd3",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "run_protocol_tests.py",
+      "source_sha256": "683bde14cf98e9c03cca6b618acdc598094d4462724bde244b80a8fe88d8fb2a",
+      "public_path": "experiments/olx/src/run_protocol_tests.py",
+      "public_sha256": "c4488a52f41f96daf5a760b266bfa97b26fc51feca8ae2efcca2552cd195bc13",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "run_repaired_ranking.py",
+      "source_sha256": "564664c2903434adcae0babfb8e2a813ce2d8be6055632e000186bdd90af700b",
+      "public_path": "experiments/olx/src/run_repaired_ranking.py",
+      "public_sha256": "529588beeaf5b211623c90f68511dd529a37f7d1a94653d2669f0120e0e3b853",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "train_bim_e8a_olx.py",
+      "source_sha256": "e7c5e6497ec0ad52c02c08781ba7d877d75a51784ebb7a6ff61637150957a7b5",
+      "public_path": "src/train_bim_e8a_olx.py",
+      "public_sha256": "e7c5e6497ec0ad52c02c08781ba7d877d75a51784ebb7a6ff61637150957a7b5",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "verify_contact_calibration.py",
+      "source_sha256": "bd0378fd710863067fbf3c89acfb8f8215427439872317518fe90a2be4a65e55",
+      "public_path": "experiments/olx/src/verify_contact_calibration.py",
+      "public_sha256": "dbdf03ada68a806630cb9c78ee0e750a057b6bd3a7f97e472b4ff53e84a78112",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "verify_downstream_statistics.py",
+      "source_sha256": "97262fe50e92a0566dfec43d4a70e88e3b0da623b942ff6f223d29c5ead8f74b",
+      "public_path": "experiments/olx/src/verify_downstream_statistics.py",
+      "public_sha256": "be5e23a0a657030bcac3316b185f052fa06a8f5b78cf26d95cc004bb0b505ff8",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "verify_evaluation_contract.py",
+      "source_sha256": "ec2ee60629e960ea9368ae722087dfed8e68cd469a6683d2c3a251abb93fb975",
+      "public_path": "experiments/olx/src/verify_evaluation_contract.py",
+      "public_sha256": "448c4a45c7797f3c1dbb0fd309562240e113870b41e82ffa04c22e37eb52f10a",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "verify_normalization_experiment.py",
+      "source_sha256": "d2854157d94993f44dd109c734fa34068253858982e0340c0aa4573bb5d42677",
+      "public_path": "experiments/olx/src/verify_normalization_experiment.py",
+      "public_sha256": "a1dfc715548cc09e42c8df0e95311d3a436160a0e1aa52b3a32b4349a05a6d89",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "module": "verify_rebuilt_features.py",
+      "source_sha256": "f71054ba8a7fc2151795627374c6472e902b9a99728a986553a17e7e0ab48987",
+      "public_path": "experiments/olx/src/verify_rebuilt_features.py",
+      "public_sha256": "71c3a7628c6d140e3c9b21cdfdea4b422e40c3ddf4eebbd47775c6bc4b117894",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+    },
+    {
+      "artifact": "prediction_and_ranking_statistics.json",
+      "source_sha256": "52ea706d9d6dba549adffd114296fb6411cff2662487dbd864fb7281e2f32042",
+      "public_path": "results/olx/prediction_and_ranking_statistics.json",
+      "public_sha256": "df22ed4b7a4fe080d2b1919f11d39ba93a23a3495e94d47e836988e9c4f88cd3",
+      "adaptation": "Local path redaction and non-scientific metadata exclusion only"
+    },
+    {
+      "artifact": "conditional_calibration.json",
+      "source_sha256": "46d331aad83544561ba5812849fd15c0473a55fb2416dfd53354e9eff7d069d2",
+      "public_path": "results/olx/conditional_calibration.json",
+      "public_sha256": "7f7ac6bb13fb6e61e2af4598074a0b990452db481c276d7ba70bd21c139e2d15",
+      "adaptation": "Local path redaction and non-scientific metadata exclusion only"
+    },
+    {
+      "artifact": "risk_transfer_diagnostics.json",
+      "source_sha256": "921b9b31be172d50660526c60feb0e4da5847f5871169225827492bdbf218ada",
+      "public_path": "results/olx/risk_transfer_diagnostics.json",
+      "public_sha256": "e0295da7fde68c40892ccdc86ad164628408c8dced07b8ee300a52dbf31f367d",
+      "adaptation": "Local path redaction and non-scientific metadata exclusion only"
+    },
+    {
+      "artifact": "normalization.json",
+      "source_sha256": "52d9585ca4200aaace210539ee095422e45fdb99689e6d9c173e13c50c6b78f7",
+      "public_path": "results/olx/normalization.json",
+      "public_sha256": "53389e5887784f43f5c020ff90874c2d58931f5ea75e4e997c0d2cc8d0d2581f",
+      "adaptation": "Local path redaction and non-scientific metadata exclusion only"
+    },
+    {
+      "artifact": "normalization_development_grid.json",
+      "source_sha256": "7d663384fd99fe855210c9f6129bb896ec6f8246b412c82e871fc1f3aacee6f9",
+      "public_path": "results/olx/normalization_development_grid.json",
+      "public_sha256": "d6548772aa4b783711dffec627734f44ae1a78b2386bc3b31279e246c3798275",
+      "adaptation": "Local path redaction and non-scientific metadata exclusion only"
+    },
+    {
+      "artifact": "normalization_selected_settings.json",
+      "source_sha256": "a6386c2b598f12d6f8a17889a5f49beb315e999fe79b5bc50b648b9e6a244983",
+      "public_path": "results/olx/normalization_selected_settings.json",
+      "public_sha256": "a98bf9488c41920b66dcf8df43de5ee510ed56f5e90f3cd053844cdc4e6d0c82",
+      "adaptation": "Local path redaction and non-scientific metadata exclusion only"
+    },
+    {
+      "artifact": "full_catalog_development_grid.json",
+      "source_sha256": "1705c653a5b1f90f9aefba816d3aeacc0d0c2681a563d58a85c39d8e8946eb04",
+      "public_path": "results/olx/full_catalog_development_grid.json",
+      "public_sha256": "e6f7cfff6f66ab59b5cc7e25e9279cf32a0631c35f4714bd953c3b251d31ad83",
+      "adaptation": "Local path redaction and non-scientific metadata exclusion only"
+    },
+    {
+      "artifact": "full_catalog_selected_settings.json",
+      "source_sha256": "d50fbc69101859e79cdf356d12bf76154e3b8df100e40fb3b5379f0d30310ab0",
+      "public_path": "results/olx/full_catalog_selected_settings.json",
+      "public_sha256": "3df1d381cf281497a2d30eaa6ad0e68795ffa8fea3f1e7d43167e95c0bbd1b7a",
+      "adaptation": "Local path redaction and non-scientific metadata exclusion only"
+    },
+    {
+      "artifact": "feature_build.json",
+      "source_sha256": "4aab39b80811eab8a7061b08355a60903c7574fb510adc2d52b2148d1cd2bac5",
+      "public_path": "results/olx/feature_build.json",
+      "public_sha256": "c8748d8b7bdda3c6bdf4a43de76f2c0a1fc8853df612128382003efa40e54ed8",
+      "adaptation": "Local path redaction and non-scientific metadata exclusion only"
+    },
+    {
+      "artifact": "conditional_prediction_loss.json",
+      "source_sha256": "fcf1714282508e04200b6d35c2bfd3a2c66221ee85ebe49b77fb97092cac7c99",
+      "public_path": "results/olx/conditional_prediction_loss.json",
+      "public_sha256": "5f6fc39bb254982943ee67c5c37da2bb6c068859690812119d8dc16ef4b15a9e"
+    }
+  ],
+  "excluded": [
+    "Raw interactions",
+    "User/item-level records",
+    "Candidate arrays",
+    "Model weights",
+    "Manuscript",
+    "Supplementary material",
+    "Cover letter",
+    "Author declarations"
+  ],
+  "calculations_changed": false,
+  "scientific_routines_ast_identical": 100,
+  "aggregate_numeric_values_identical": 3752
+}

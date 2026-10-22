@@ -1,55 +1,25 @@
-# Raw and processed datasets
+__pycache__/
+*.pyc
+.venv/
+.env
 data/
-datasets/
-**/raw/
-**/cache/
+*.docx
+*.doc
+*.dot
+*.pdf
+*.zip
 *.parquet
-*.feather
-*.arrow
-*.pkl
-*.pickle
-
-# User-level or model artifacts
 *.npy
 *.npz
 *.pt
 *.pth
-*.ckpt
-
-# Credentials and local configuration
-.env
-.env.*
-*.key
-*.pem
-credentials*
-secrets*
-
-# Python and notebook state
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-.ipynb_checkpoints/
-.matplotlib/
-
-# Local outputs and logs
-logs/
-tmp/
-.tmp/
-outputs/
 *.log
-
-# Operating-system and editor files
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
-# Office documents and temporary document files
-*.docx
-*.doc
-*.pdf
-~$*
-manuscript*/
-supplement*/
-private_documents/
+experiments/olx/features/
+experiments/olx/model_reruns/
+experiments/olx/contact_analysis/
+experiments/olx/protocol_checks/
+experiments/olx/downstream_comparisons/
+experiments/olx/driver_integration/
+experiments/olx/statistical_analysis/
+experiments/olx/risk_transfer_diagnostic/
+experiments/olx/normalization_experiment/

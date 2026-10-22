@@ -1,0 +1,81 @@
+{
+  "status": "completed",
+  "training_fit_cutoff": 1582312306,
+  "validation_end_cutoff": 1582493743,
+  "source_path": "${PROJECT_ROOT}\\data\\olx\\04_sequences\\ui_sequences.parquet",
+  "source_sha256": "861e2006ec0517e9a61a6f234d24954a0dcfa055415539c6e725aa36f13fefb7",
+  "pathway_parameters": {
+    "chat_click": {
+      "transition_probability": 0.4973205487257737,
+      "transition_lift": 11.754645434914698,
+      "q50": 13,
+      "q75": 42,
+      "q90": 110,
+      "q95": 194
+    },
+    "contact_phone_click_1": {
+      "transition_probability": 0.4156236758496753,
+      "transition_lift": 17.129614386940986,
+      "q50": 2,
+      "q75": 4,
+      "q90": 9,
+      "q95": 19
+    }
+  },
+  "parameter_quantiles": "exact empirical quantile_disc",
+  "parameter_fit_policy": "positive-time adjacent transitions with target timestamp strictly before training cutoff",
+  "context_policy": "events strictly before query time; latest-time event ties resolved lexicographically using observed events only",
+  "position_policy": "predictive position replaced by strict prior-event count; original_position retained for identity",
+  "history_policy": "Q90 outcome counts admitted only after complete maturity, strictly before query time",
+  "label_policy": "Q95 complete before train/validation boundary; test Q95 within observed data endpoint",
+  "evaluation_status": "retrospective validity repair, not a new untouched holdout",
+  "purged_rows": {
+    "train": 551,
+    "validation": 400
+  },
+  "outputs": {
+    "successful_contact": {
+      "path": "${PROJECT_ROOT}\\experiments/olx\\features\\bim_features_successful_contact.parquet",
+      "sha256": "ff65179811f7bd2b3fa230842f854892a9eda6d7af0cde3ace2688c7910720b1",
+      "split_counts": {
+        "test": 348106,
+        "train": 2167546,
+        "validation": 573576
+      },
+      "nonprogression_rates": {
+        "test": 0.7437274853061998,
+        "train": 0.7438148948165345,
+        "validation": 0.7367166687588044
+      }
+    },
+    "contact_chat": {
+      "path": "${PROJECT_ROOT}\\experiments/olx\\features\\bim_features_contact_chat.parquet",
+      "sha256": "1864079ffea5c1e781ab246701af71dcbaaab2e832a29bd4a22130967da847a1",
+      "split_counts": {
+        "test": 157199,
+        "train": 977844,
+        "validation": 254575
+      },
+      "nonprogression_rates": {
+        "test": 0.667338850756048,
+        "train": 0.6670092571003146,
+        "validation": 0.6643228910929981
+      }
+    },
+    "phone_contact": {
+      "path": "${PROJECT_ROOT}\\experiments/olx\\features\\bim_features_phone_contact.parquet",
+      "sha256": "4d9f9aa725b34ba8a244ca84abe6ba0830d732507e1d9c078a2401035a7cb3c8",
+      "split_counts": {
+        "test": 190907,
+        "train": 1189702,
+        "validation": 319001
+      },
+      "nonprogression_rates": {
+        "test": 0.806628358310591,
+        "train": 0.8069432513352083,
+        "validation": 0.7944896724461679
+      }
+    }
+  },
+  "duration_seconds": 419.26586055755615
+}

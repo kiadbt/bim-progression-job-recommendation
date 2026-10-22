@@ -1,0 +1,55 @@
+{
+  "full_catalog": [
+    {
+      "name": "development",
+      "training_end_exclusive": 1582239167,
+      "outcome_interval": [
+        1582239167,
+        1582401299
+      ],
+      "catalog_items": 172925,
+      "relevance_pairs": 4873800,
+      "users": 613442,
+      "catalog_file": "full_catalog_development_items.npy",
+      "relevance_file": "full_catalog_development_relevance.parquet"
+    },
+    {
+      "name": "later_retrospective",
+      "training_end_exclusive": 1582401299,
+      "outcome_interval": [
+        1582401299,
+        1582675200
+      ],
+      "catalog_items": 178696,
+      "relevance_pairs": 6106503,
+      "users": 619032,
+      "catalog_file": "full_catalog_later_retrospective_items.npy",
+      "relevance_file": "full_catalog_later_retrospective_relevance.parquet"
+    }
+  ],
+  "sampled": {
+    "training_end_exclusive": 1582312306,
+    "validation_end_exclusive": 1582493743,
+    "data_end_exclusive": 1582675200,
+    "cases_by_split": {
+      "test": 12783,
+      "validation": 21046
+    },
+    "catalog_items": 175518,
+    "candidate_count": 1000,
+    "seed": 20261020,
+    "task": "First successful contact on a different job within 24 hours, conditional on such an outcome; not generic next-action prediction",
+    "seen_policy": "Target and negatives exclude any user-item interaction at or before source timestamp",
+    "catalog_policy": "Items first observed strictly before the training cutoff",
+    "followup_policy": "Complete 24-hour horizon strictly before each partition endpoint",
+    "case_policy": "First eligible source attempt per user and split after model-independent eligibility filters",
+    "sampling_policy": "999 distinct unobserved items without replacement; per-attempt SeedSequence",
+    "negative_interpretation": "Unobserved comparison items, not verified dislikes; other future positives are not excluded using future information"
+  },
+  "development_selection": {
+    "users": 30000,
+    "seed": 10,
+    "file": "full_catalog_development_tuning_users.npy",
+    "scope": "Common tuning cohort for all full-catalog comparators; remaining development users are not an independent holdout"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "saved_at_utc": "2026-10-20T16:47:21.426203+00:00",
+  "selection_split": "validation",
+  "weights": {
+    "current__actual": 0.25,
+    "current__context": 0.25,
+    "current__fixed_global": 0.25,
+    "current__fixed_pathway": 0.25,
+    "current__shuffled_pathway": 0.25,
+    "current__zero": 0.25,
+    "reference__actual": 0.25,
+    "reference__context": 0.25,
+    "reference__fixed_global": 0.25,
+    "reference__fixed_pathway": 0.25,
+    "reference__shuffled_pathway": 0.25,
+    "reference__zero": 0.25
+  },
+  "selection_outcomes_end": 1582493743,
+  "specification_sha256": "7eaf5d335a6c73603d477a1c4fb6a380588a67ea2df78db5413309702d4bce23"
+}

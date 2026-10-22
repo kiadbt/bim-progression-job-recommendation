@@ -1,0 +1,24 @@
+[
+  {
+    "comparison": "primitive_evidence_minus_context_control",
+    "metric": "brier",
+    "difference": -0.0015961148703161876,
+    "ci95_lower": -0.0023225236038762215,
+    "ci95_upper": -0.0009150373778702508,
+    "attempts": 12783,
+    "user_clusters": 12783,
+    "replicates": 2000,
+    "interpretation": "Negative means lower prediction loss; exploratory pointwise interval; not recommendation improvement"
+  },
+  {
+    "comparison": "primitive_evidence_minus_context_control",
+    "metric": "log_loss",
+    "difference": -0.003702674355550239,
+    "ci95_lower": -0.005455360334689289,
+    "ci95_upper": -0.002078910198040047,
+    "attempts": 12783,
+    "user_clusters": 12783,
+    "replicates": 2000,
+    "interpretation": "Negative means lower prediction loss; exploratory pointwise interval; not recommendation improvement"
+  }
+]

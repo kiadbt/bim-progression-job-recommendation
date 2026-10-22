@@ -1,0 +1,228 @@
+{
+  "status": "completed_retrospective_conditional_analysis",
+  "metrics": [
+    {
+      "variant": "primitive_evidence",
+      "split": "validation",
+      "version": "raw",
+      "rows": 21046,
+      "label_prevalence": 0.5099306281478666,
+      "mean_probability": 0.42850160976142754,
+      "roc_auc": 0.711392412427922,
+      "average_precision": 0.7436781831993828,
+      "log_loss": 0.6267663869572195,
+      "brier_score": 0.2195821578848728,
+      "ece_15_bins": 0.081429018386439
+    },
+    {
+      "variant": "primitive_evidence",
+      "split": "validation",
+      "version": "all_attempt_calibration",
+      "rows": 21046,
+      "label_prevalence": 0.5099306281478666,
+      "mean_probability": 0.687814589937139,
+      "roc_auc": 0.711392412427922,
+      "average_precision": 0.7436781831993828,
+      "log_loss": 0.6905418716368007,
+      "brier_score": 0.24823973482329503,
+      "ece_15_bins": 0.17788396178927232
+    },
+    {
+      "variant": "primitive_evidence",
+      "split": "validation",
+      "version": "conditional_calibration",
+      "rows": 21046,
+      "label_prevalence": 0.5099306281478666,
+      "mean_probability": 0.5099306282514899,
+      "roc_auc": 0.711392412427922,
+      "average_precision": 0.7436781831993828,
+      "log_loss": 0.6109345101466219,
+      "brier_score": 0.21314065357429865,
+      "ece_15_bins": 0.019187685937667263
+    },
+    {
+      "variant": "primitive_evidence",
+      "split": "test",
+      "version": "raw",
+      "rows": 12783,
+      "label_prevalence": 0.5046546194164124,
+      "mean_probability": 0.4416742367730557,
+      "roc_auc": 0.7174221080377241,
+      "average_precision": 0.7449677842966183,
+      "log_loss": 0.6159317047485797,
+      "brier_score": 0.2149544953187066,
+      "ece_15_bins": 0.06298038264335676
+    },
+    {
+      "variant": "primitive_evidence",
+      "split": "test",
+      "version": "all_attempt_calibration",
+      "rows": 12783,
+      "label_prevalence": 0.5046546194164124,
+      "mean_probability": 0.6946082115779707,
+      "roc_auc": 0.7174221080377241,
+      "average_precision": 0.7449677842966183,
+      "log_loss": 0.7002920243806336,
+      "brier_score": 0.2508535440770686,
+      "ece_15_bins": 0.19005115353756608
+    },
+    {
+      "variant": "primitive_evidence",
+      "split": "test",
+      "version": "conditional_calibration",
+      "rows": 12783,
+      "label_prevalence": 0.5046546194164124,
+      "mean_probability": 0.5215762225442133,
+      "roc_auc": 0.7174221080377241,
+      "average_precision": 0.7449677842966183,
+      "log_loss": 0.6073982258390845,
+      "brier_score": 0.21158003897882177,
+      "ece_15_bins": 0.028570932825843567
+    },
+    {
+      "variant": "context_control",
+      "split": "validation",
+      "version": "raw",
+      "rows": 21046,
+      "label_prevalence": 0.5099306281478666,
+      "mean_probability": 0.4294301691559513,
+      "roc_auc": 0.7063296943004204,
+      "average_precision": 0.7397191981124438,
+      "log_loss": 0.6294082090424165,
+      "brier_score": 0.2209131068781693,
+      "ece_15_bins": 0.08050045899191528
+    },
+    {
+      "variant": "context_control",
+      "split": "validation",
+      "version": "all_attempt_calibration",
+      "rows": 21046,
+      "label_prevalence": 0.5099306281478666,
+      "mean_probability": 0.6911397742635436,
+      "roc_auc": 0.7063296943004204,
+      "average_precision": 0.7397191981124438,
+      "log_loss": 0.6956641285582416,
+      "brier_score": 0.25034420787687217,
+      "ece_15_bins": 0.18127951693299335
+    },
+    {
+      "variant": "context_control",
+      "split": "validation",
+      "version": "conditional_calibration",
+      "rows": 21046,
+      "label_prevalence": 0.5099306281478666,
+      "mean_probability": 0.5099306281806267,
+      "roc_auc": 0.7063296943004204,
+      "average_precision": 0.7397191981124438,
+      "log_loss": 0.6138531181296655,
+      "brier_score": 0.21447644154572892,
+      "ece_15_bins": 0.016384714304760767
+    },
+    {
+      "variant": "context_control",
+      "split": "test",
+      "version": "raw",
+      "rows": 12783,
+      "label_prevalence": 0.5046546194164124,
+      "mean_probability": 0.44325569917009344,
+      "roc_auc": 0.712138473196015,
+      "average_precision": 0.7399418731480112,
+      "log_loss": 0.6189278606196336,
+      "brier_score": 0.21644194203058267,
+      "ece_15_bins": 0.06139892024631897
+    },
+    {
+      "variant": "context_control",
+      "split": "test",
+      "version": "all_attempt_calibration",
+      "rows": 12783,
+      "label_prevalence": 0.5046546194164124,
+      "mean_probability": 0.6990201731486929,
+      "roc_auc": 0.712138473196015,
+      "average_precision": 0.7399418731480112,
+      "log_loss": 0.7072621688673724,
+      "brier_score": 0.25349665248807424,
+      "ece_15_bins": 0.19448120018745627
+    },
+    {
+      "variant": "context_control",
+      "split": "test",
+      "version": "conditional_calibration",
+      "rows": 12783,
+      "label_prevalence": 0.5046546194164124,
+      "mean_probability": 0.52262133182875,
+      "roc_auc": 0.712138473196015,
+      "average_precision": 0.7399418731480112,
+      "log_loss": 0.6111009001946347,
+      "brier_score": 0.21317615384913796,
+      "ece_15_bins": 0.02568528926545985
+    }
+  ],
+  "calibrators": {
+    "primitive_evidence": {
+      "method": "sigmoid_of_logit",
+      "slope": 1.0660887105765415,
+      "intercept": 0.4077618688437137,
+      "input_clip": 1e-07,
+      "fit_split": "validation",
+      "available_from": 1582493743,
+      "fit_rows": 21046,
+      "validation_nonprogression_rate": 0.5099306281478666,
+      "loss": "unweighted binary cross entropy",
+      "iterations": 6,
+      "validation_loss_apparent": 0.6109345101466219,
+      "selection_policy": "fixed method, no test-based choice"
+    },
+    "context_control": {
+      "method": "sigmoid_of_logit",
+      "slope": 1.0989130520171617,
+      "intercept": 0.4127080783538738,
+      "input_clip": 1e-07,
+      "fit_split": "validation",
+      "available_from": 1582493743,
+      "fit_rows": 21046,
+      "validation_nonprogression_rate": 0.5099306281478666,
+      "loss": "unweighted binary cross entropy",
+      "iterations": 6,
+      "validation_loss_apparent": 0.6138531181296655,
+      "selection_policy": "fixed method, no test-based choice"
+    }
+  },
+  "source_sha256": {
+    "successful_contact__primitive_evidence__validation.parquet": "160e842eba0bd121505bd566bc7cfddd50cb244f35a818549c0b021fa78db48d",
+    "successful_contact__primitive_evidence__test.parquet": "5784837907fb81d396ef21c8f2eb905265e2a09f493eaf1fd2de5e0aca9afe7f",
+    "successful_contact__context_control__validation.parquet": "9037f7811340a0e0418a7b05aa1495557680a9dbfc431271ad7f180f619fdcde",
+    "successful_contact__context_control__test.parquet": "612c506968cdcf71b34079e8437230a570f03cb5d0f1ca5dfb913b1812c79f7e"
+  },
+  "exports": {
+    "primitive_evidence__validation.parquet": {
+      "sha256": "c7be0ad6776589e0deeb96b797215c354c993782ecd1a7bdd63df896b666f111",
+      "rows": 21046
+    },
+    "primitive_evidence__test.parquet": {
+      "sha256": "c8035e35a8b02b077de882ec3a0006c8963f1efa1728933c08bc82d5803634d0",
+      "rows": 12783
+    },
+    "context_control__validation.parquet": {
+      "sha256": "4132e0fb3e9f81147b93de278bd4212110e4fbab2610c3a8b278afafd1d2b4fd",
+      "rows": 21046
+    },
+    "context_control__test.parquet": {
+      "sha256": "b28fb2b15a428c0ae740e6c883c481636cc4b734d4e7d0bea7f5721a3e98d0d1",
+      "rows": 12783
+    }
+  },
+  "control_file": "sampled_conditional_control_inputs.parquet",
+  "control_sha256": "b6710e549a40462f19e72d0f3d1269bff0d382dca5b68dc038309fc7df49e41d",
+  "fixed_validation_mean": 0.5099306282514899,
+  "fixed_validation_pathway_means": {
+    "chat_click": 0.4425676339044781,
+    "contact_phone_click_1": 0.5922110346884353
+  },
+  "available_from": 1582493743,
+  "eligible_validation_cases": 21046,
+  "eligible_test_cases": 12783,
+  "purpose": "Conditional benchmark scores only; not a validated production probability model",
+  "selection_status": "Corrective reanalysis after prior diagnostics; no confirmatory interpretation",
+  "downstream_ranking_comparisons_started": false
+}

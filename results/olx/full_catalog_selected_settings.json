@@ -1,0 +1,20 @@
+{
+  "selection_split": "development",
+  "weights": {
+    "popularity": 0.1,
+    "contact_count": 0.1,
+    "contact_rate": 0.05,
+    "recency": 0.25
+  },
+  "selection_outcomes_end": 1582401299,
+  "source_code": {
+    "run_repaired_ranking.py": "564664c2903434adcae0babfb8e2a813ce2d8be6055632e000186bdd90af700b",
+    "ranking_driver_core.py": "959cd041c00b9e57d03eaec4c0dedb1e9fa2888ec6b072819c46e78fce58e4e6",
+    "comparison_adapter.py": "231abf98c075a63100fa6004372c81f60e5e2b6f0000f7bde8f47e4f5acdb028",
+    "protocol_primitives.py": "33b20b668ee3169f718127b055def625952a05b5612ad75f3767b33e9ed9ecb4",
+    "approved_evaluation_inputs.py": "c194af6c84eaef44c6e495b2d9722360176c95c421621bafb9101289da0aa160",
+    "calibrated_score_gate.py": "dbc2b06b8f3c3f59263fe758f6aa802312efc78c52371395d8905b49b66e65de"
+  },
+  "purpose": "retrospective_comparison",
+  "selection_rule": "Maximum development NDCG@10 subject to coverage at least 95% of same-case RP3Beta; ties by Recall@10 then smaller weight; zero weight remains eligible"
+}

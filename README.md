@@ -1,87 +1,47 @@
-# Leakage-Safe Progression-Aware Graph Reranking for Job Recommendation
+# Behavioral Nonprogression and Ranking Utility in Job Recommendation
 
-This repository contains the code, frozen configurations, aggregate evaluation outputs, and reproducibility records supporting the manuscript **“Leakage-Safe Progression-Aware Graph Reranking for Large-Scale Job Recommendation.”**
+Code, experiment settings, regression tests and aggregate results for an empirical OLX Jobs study of whether predicting source-attempt nonprogression improves ranking of alternative jobs.
 
-## Scope
+## Study scope
 
-The release supports the reported experiments on:
+Two distinct evaluation tasks are reported:
 
-- sampled next-action ranking;
-- published full-catalog OLX evaluation;
-- progression-aware RP3Beta reranking;
-- diversity-constrained model selection;
-- frozen temporal transfer;
-- subgroup and popularity-exposure auditing;
-- matched-popularity full-catalog control;
-- paired BIM personalization controls;
-- behavior-aware LightGCN comparison; and
-- candidate-conditional Taobao and Tmall stress tests.
+- **Conditional sampled ranking:** 21,046 development cases and 12,783 test cases. Each case ranks a subsequent qualifying contact on another job against 999 distinct unobserved alternatives. Eligibility conditions on a later qualifying contact; it is not a deployment population.
+- **Full-catalog ranking:** 619,032 later-period users and 178,696 cutoff-observed jobs. Four item-prior families share development users, weight grids and a development coverage constraint. The calibrated BIM model is not used here because its selection boundary occurs after this task starts.
 
-The repository deliberately does not contain raw interaction data, user-level records, recommendation arrays, or other redistribution-restricted artifacts.
+Training-prefix features admit resolved previous outcomes only after their maturity window has finished. Models and ranking controls use shared temporal rules, candidates and deterministic item-ID tie breaking. All periods were inspected during the research; the results are retrospective, not untouched independent validation.
 
-## Repository structure
+## Main findings
 
-```text
-configs/          Frozen experiment configurations
-figures/          Publication figures generated from aggregate results
-reproducibility/  Environment, runtime, and manifest summaries
-results/olx/      Aggregate OLX metrics, sweeps, and paired intervals
-results/cross_domain/
-                  Aggregate Taobao and Tmall stress-test summaries
-src/              Evaluation, bootstrap, audit, training, and figure scripts
+History features improve source-outcome probability prediction relative to the context control, but the tested personalized risk does not establish extra ranking value over matched simpler controls. Changing to a common reference normalization leaves personalized BIM NDCG@10 essentially unchanged.
+
+In the separate full-catalog task, successful-contact count fusion increases RP3Beta NDCG@10 from 0.074749 to 0.074970 (approximately 0.30% relative). Popularity, recency and the fixed published P3LTR degree-recency component are more accurate. Tail-target results are sparse and descriptive. These results do not establish a new state-of-the-art architecture, causal user benefit or psychological assessment.
+
+## Contents
+
+| Path | Contents |
+|---|---|
+| `src/` | Preprocessing, sequence construction, source-label and MLP dependencies |
+| `experiments/olx/src/` | Observable histories, calibration, input gates, ranking, bootstrap and normalization analysis |
+| `experiments/olx/tests/` | Synthetic regression tests; no private dataset required |
+| `configs/` | Recorded input features and evaluation/normalization settings |
+| `results/olx/` | Aggregate statistics, development grids, populations and diagnostics |
+| `reproducibility/` | Environment, checksums, source provenance and release checks |
+
+See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for setup and execution order, [RESULTS.md](RESULTS.md) for result-file interpretation, and [DATA.md](DATA.md) for required local inputs and restrictions.
+
+## Quick checks
+
+```shell
+python -m pip install -r requirements.txt
+python -m unittest discover -s experiments/olx/tests -v
+python tools/verify_release.py
 ```
 
-## Data
+No manuscript, supplementary document, cover letter, declarations, raw interactions, user-level predictions, candidate arrays, recommendation lists or model weights are distributed. Source-data authorization is required for end-to-end reruns. Aggregate files are not a substitute for private inputs, and historical execution hashes are not fresh-run validation records.
 
-The primary OLX Jobs interactions and the external Taobao and Tmall datasets are not redistributed. See [DATA.md](DATA.md) for the access conditions and the expected local-data arrangement.
-
-## Environment
-
-The recorded experiment environment is summarized in `reproducibility/environment.json`. The frozen Python package inventory is provided in `requirements-gpu-lock.txt`.
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements-gpu-lock.txt
-```
-
-GPU experiments reported in the manuscript used an NVIDIA GeForce RTX 2060 with 6 GB memory. The sparse RP3Beta evaluations can be run independently of the trainable LightGCN comparator when suitable processed inputs are available.
-
-## Reproducing the experiments
-
-The experiments include matched-popularity and individualized-BIM control analyses. Aggregate results, evaluation configurations, and implementation dependencies are documented in `reproducibility/verification.json`. SHA-256 checksums are provided in `reproducibility/artifact_sha256.csv`.
-
-The configuration files specify the frozen protocols and output locations used in the study. The released aggregate outputs allow independent checking of the manuscript tables and figures without exposing user-level data.
-
-Key entry points include:
-
-- `src/evaluate_rp3beta_fixed_candidates_olx.py`
-- `src/evaluate_full_catalog_published_protocol_olx.py`
-- `src/evaluate_deployable_progression_full_catalog_olx.py`
-- `src/evaluate_diversity_controlled_progression_full_catalog.py`
-- `src/evaluate_frozen_progression_temporal_cohort_olx.py`
-- `src/audit_full_catalog_progression_subgroups.py`
-- `src/evaluate_popularity_matched_control_full_catalog.py`
-- `src/bootstrap_full_catalog_three_way_control.py`
-- `src/bootstrap_bim_personalization_controls.py`
-- `src/train_behavior_aware_lightgcn_olx.py`
-- `src/evaluate_p3ltr_degree_recency_olx.py`
-- `src/create_publication_figures.py`
-
-Because the raw datasets cannot be redistributed, exact end-to-end reruns require users to obtain the source datasets independently and construct the processed inputs described in `DATA.md`. The aggregate result files in this repository are the aggregate records supporting the reported analyses.
-
-The original `configs/behavior_aware_lightgcn.yaml` records the one-epoch feasibility configuration. The completed three-seed, 30-epoch comparator is recorded separately in `configs/behavior_aware_lightgcn_final.json` and `results/olx/behavior_aware_lightgcn_aggregate_summary.json`; the feasibility file must not be mistaken for the final benchmark configuration.
-
-## Interpretation and limitations
-
-The released evidence supports modest, temporally robust progression-aware gains over RP3Beta on the OLX protocols. A matched full-catalog control shows that interaction popularity is stronger than progression at the same fusion weight. Paired BIM controls do not establish a consistent individualized advantage, and direct tail-safety constraints select unmodified RP3Beta. The evidence therefore does not establish a uniquely progression-specific mechanism, universal cross-domain superiority, causal psychological inference, cold-start improvement, or state-of-the-art performance across incomparable datasets. Taobao and Tmall are reported as candidate-conditional boundary tests rather than direct job-domain replications.
-
-## Citation
-
-If this repository supports your work, cite the associated article after publication. The article DOI and final bibliographic record will be added when available.
+The repository URL is unchanged. Earlier repository contents remain available in Git history but are not the result release documented here. No publication DOI is assigned in this repository.
 
 ## Contact
 
-Kamaluddeen Ibrahim Yarima, corresponding author  
-School of Digital Science, Universiti Brunei Darussalam
-
+Kamaluddeen Ibrahim Yarima, School of Digital Science, Universiti Brunei Darussalam. Correspondence: 23h8550@ubd.edu.bn.

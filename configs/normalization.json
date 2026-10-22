@@ -1,0 +1,89 @@
+{
+  "experiment": "Risk-independent reference-scale normalization",
+  "scope": "Retrospective conditional sampled OLX benchmark; no new holdout or model training",
+  "hypothesis": "Risk-dependent within-query standardization attenuates transferable differences between personalized and control risk scores.",
+  "raw_auxiliary": "a(r,i)=log1p(S_i)-r*log1p(N_i), with pathway-specific, training-only mature attempt counts",
+  "normalizations": {
+    "current": "(a(r)-mean_candidates(a(r)))/(std_candidates(a(r))+1e-8)",
+    "reference": "(a(r)-mean_candidates(a(r)))/(std_candidates(a(r0))+1e-8)"
+  },
+  "reference_risk": "The existing fixed-global conditional risk r0, unchanged from the prior experiment. The same query-specific reference denominator is used for every risk variant, including success-only. It uses candidate features, never target relevance.",
+  "combined_score": "zscore_candidates(RP3Beta)+gamma*normalized_auxiliary",
+  "risk_variants": [
+    "actual",
+    "context",
+    "fixed_global",
+    "fixed_pathway",
+    "shuffled_pathway",
+    "zero"
+  ],
+  "primary_representation": "Previously calibrated conditional probabilities; zero denotes success-only",
+  "gamma_grid": [
+    0,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    1,
+    2
+  ],
+  "selection": "Each normalization and risk variant receives the same full validation cohort and grid; maximize NDCG@10, then Recall@10, then prefer smaller gamma. Serialize settings before test scoring.",
+  "fixed_weight_sensitivity": 0.25,
+  "fixed_weight_purpose": "Isolate normalization changes without retuning the fusion weight.",
+  "ranking": "Exact descending score with ascending item ID for ties; same 1000 distinct eligible candidates and target identities as the corrected protocol.",
+  "primary_endpoint": "Per-query NDCG@10; one case per test user",
+  "primary_contrasts": [
+    [
+      "reference__actual",
+      "current__actual"
+    ],
+    [
+      "reference__actual",
+      "reference__context"
+    ],
+    [
+      "reference__actual",
+      "reference__fixed_global"
+    ],
+    [
+      "reference__actual",
+      "reference__fixed_pathway"
+    ],
+    [
+      "reference__actual",
+      "reference__shuffled_pathway"
+    ],
+    [
+      "reference__actual",
+      "reference__zero"
+    ]
+  ],
+  "uncertainty": {
+    "replicates": 5000,
+    "seed": 20261021,
+    "method": "Paired user bootstrap with shared resamples",
+    "primary_intervals": "Pointwise 95% and Bonferroni 99.1666667% percentile intervals for the six planned contrasts; approximately 95% family coverage.",
+    "secondary": "RP3Beta, P3LTR component, and fixed-weight contrasts receive exploratory pointwise 95% intervals only.",
+    "interpretation": "All inference remains exploratory because these test cases were inspected before this experiment."
+  },
+  "secondary_metrics": [
+    "Recall@10 (identical to HitRate@10 for one target)",
+    "MRR@10",
+    "Sampled-list catalog coverage",
+    "Tail exposure using training event-count quartiles"
+  ],
+  "coverage_caution": "Coverage is over top-ten lists from sampled candidates, not full-catalog recommendations or verified available vacancies.",
+  "integrity": [
+    "Verify input hashes and calibrated-score eligibility.",
+    "Reconstruct RP3Beta scores once and cache them in float64.",
+    "Exactly reproduce saved current-normalization development selection and test target ranks.",
+    "Fixed-global scores must be identical under both normalizations.",
+    "Check exact sorting against an independent rank oracle and test tie handling.",
+    "Do not adapt the normalization, grid, controls, or hypothesis after examining new test results.",
+    "Retain every control and both normalizations regardless of outcome.",
+    "Do not infer candidate-specific nonprogression probability from a source-attempt score."
+  ],
+  "decision": "A larger score difference alone is not a useful ranking improvement. Interpret actual risk against matched controls and stronger simple baselines; do not claim an accuracy advance solely from beating RP3Beta.",
+  "full_catalog_rerun": false,
+  "neural_retraining": false
+}

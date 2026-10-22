@@ -1,27 +1,17 @@
-# Data Access and Non-Redistribution
+# Data inputs and access
 
-## OLX Jobs
+The study uses previously recorded OLX Jobs interactions. Obtain the corresponding source data through an authorized source and comply with its actual access and reuse conditions. This repository does not grant rights to the dataset or assert that raw data are openly redistributable.
 
-The primary study uses an OLX Jobs interaction dataset available to the authors under its applicable access conditions. This repository does not distribute raw events, user identifiers, item identifiers, processed user-level matrices, candidate arrays, or recommendation outputs.
+The local preprocessing input has four columns: `user`, `item`, `event`, and `timestamp`. Events include `click`, `bookmark`, `chat_click`, `contact_chat`, `contact_phone_click_1`, `contact_phone_click_2`, `contact_phone_click_3`, and `contact_partner_click`. Timestamps are the released time-shifted Unix values; UTC conversion does not recover the real calendar dates.
 
-Researchers wishing to reproduce the full experiment must obtain authorized access to the corresponding source data and comply with its license, privacy requirements, and institutional governance conditions.
+Preprocessing removes exact duplicate events and creates deterministic integer mappings. Sequence construction adds user-job sequence IDs, event positions, preceding events and transition delays. The main experiment expects:
 
-## Taobao and Tmall
+- `data/olx/04_sequences/ui_sequences.parquet`: events with `user_idx`, `item_idx`, `event`, `timestamp`, `sequence_id`, `position`, `previous_event`, `delta_seconds` and temporal-transition fields.
+- `data/olx/09_graphs/recommendation_pilot/recommendation_eval_targets.parquet`: source attempts paired with eligible subsequent alternative-job contacts. This is an intermediate input, not a public result table.
+- Generated files below `experiments/olx/`: private feature tables, prediction files, candidate arrays, input manifests and per-user ranking outputs. Generate them locally; do not commit them.
 
-The Taobao and Tmall analyses are external-domain, candidate-conditional stress tests. Their source data must be obtained independently from the relevant public hosting source and used under the terms attached to that distribution. No source records are mirrored here.
+The conditional target is a later qualifying contact on a different previously unseen job within 24 hours. Recorded contact actions are behavioral proxies, not verified applications, interviews or hires. Unobserved comparison jobs are not verified dislikes.
 
-## Expected local inputs
+The cutoff-observed catalog is an availability proxy. Listing publication/expiry fields and independent subsequent data are not supplied here. Taobao and Tmall are not part of this result release.
 
-The released scripts expect locally prepared chronological interaction records with, at minimum:
-
-- anonymized user identifier;
-- anonymized item or job identifier;
-- behavior/event type; and
-- event timestamp.
-
-Some protocols additionally require a target-outcome indicator, candidate universe, or temporally frozen evaluation cohort. Exact filenames and paths are defined in the frozen configuration files and script arguments. Users should adapt only local paths; changing temporal cutoffs, candidate construction, or model-selection rules creates a different protocol.
-
-## Shareable evidence
-
-The `results/` directory contains only aggregate tables, validation sweeps, confidence intervals, runtime summaries, and other non-user-level evidence selected for public release.
-
+Only aggregate, non-user-level research outputs are included. Dataset access and institutional requirements must be resolved with the data provider and the researcher’s institution.

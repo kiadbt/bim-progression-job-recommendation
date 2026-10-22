@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "release_date": "2026-10-22",
+  "regression_tests": 55,
+  "failures": 0,
+  "errors": 0,
+  "aggregate_numeric_values_unchanged": 3752,
+  "scientific_routines_ast_identical": 100,
+  "full_data_experiments_rerun_for_release": false,
+  "scope": "Synthetic tests, aggregate equality, code packaging and public-file checks; not new empirical validation",
+  "private_data_and_documents_included": false
+}
