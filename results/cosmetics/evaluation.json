@@ -1,0 +1,110 @@
+{
+  "case_selection": {
+    "eligible_distinct_users_before_cap": 8782,
+    "selected_users": 3000,
+    "cutoff": 1575158400,
+    "query_start": 1575158400,
+    "query_end": 1577836800
+  },
+  "graph": {
+    "uncapped_distinct_pairs": 4223950,
+    "capped_distinct_pairs": 3821557,
+    "graph_users": 712387,
+    "catalog_items": 45654,
+    "mature_cart_sources": 2449219,
+    "latest_mature_source_plus_24h": 1575158395
+  },
+  "selected_metrics": [
+    {
+      "variant": "rp3beta",
+      "gamma": 0,
+      "ndcg": 0.1528610808072519,
+      "recall": 0.25833333333333336,
+      "mrr": 0.12039232804232805,
+      "users": 3000
+    },
+    {
+      "variant": "actual",
+      "gamma": 0.1,
+      "ndcg": 0.15926046572633776,
+      "recall": 0.275,
+      "mrr": 0.12377037037037036,
+      "users": 3000
+    },
+    {
+      "variant": "context",
+      "gamma": 0.1,
+      "ndcg": 0.15927830555097153,
+      "recall": 0.275,
+      "mrr": 0.12378941798941799,
+      "users": 3000
+    },
+    {
+      "variant": "fixed_global",
+      "gamma": 0.1,
+      "ndcg": 0.15928229394075355,
+      "recall": 0.275,
+      "mrr": 0.12379312169312169,
+      "users": 3000
+    },
+    {
+      "variant": "shuffled",
+      "gamma": 0.1,
+      "ndcg": 0.15915276423002206,
+      "recall": 0.2743333333333333,
+      "mrr": 0.12380185185185186,
+      "users": 3000
+    },
+    {
+      "variant": "success_only",
+      "gamma": 0.1,
+      "ndcg": 0.1595745864635118,
+      "recall": 0.276,
+      "mrr": 0.12388716931216932,
+      "users": 3000
+    },
+    {
+      "variant": "popularity",
+      "gamma": 0.1,
+      "ndcg": 0.15698686007998938,
+      "recall": 0.269,
+      "mrr": 0.12257738095238097,
+      "users": 3000
+    },
+    {
+      "variant": "p3ltr_component",
+      "gamma": 0,
+      "ndcg": 0.15035490183206193,
+      "recall": 0.24866666666666667,
+      "mrr": 0.12029761904761904,
+      "users": 3000
+    }
+  ],
+  "weight_grid_metrics": null,
+  "prediction": {
+    "actual": {
+      "auc": 0.5279927414335264,
+      "average_precision": 0.26837234642297914,
+      "brier": 0.19242745637893677,
+      "log_loss": 0.5730976462364197,
+      "nonprogression_rate": 0.25933333333333336
+    },
+    "context": {
+      "auc": 0.538576608303504,
+      "average_precision": 0.2688560525660699,
+      "brier": 0.1923706829547882,
+      "log_loss": 0.5730851888656616,
+      "nonprogression_rate": 0.25933333333333336
+    },
+    "fixed_global": {
+      "auc": 0.5,
+      "average_precision": 0.25933333333333336,
+      "brier": 0.19260914648146243,
+      "log_loss": 0.573687952639215,
+      "nonprogression_rate": 0.25933333333333336
+    }
+  },
+  "target_zero_rp3_score_fraction": 0.491,
+  "candidate_checks_passed": true,
+  "exact_rank_oracle_cases_per_setting": 10
+}

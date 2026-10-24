@@ -1,0 +1,34 @@
+{
+  "original_source_sha256": "19fa45f997d462bc6352b90cc42b877d5be4e2b4232f3d4a4d230fab37cbd780",
+  "portable_source_sha256": "3272e206c2de3f0fb9bcac4a5852ff573a8ea851b9b4d90402375eb8e350a4dc",
+  "unchanged_numerical_functions": [
+    "calibrated",
+    "cap_users",
+    "cases",
+    "digest",
+    "feature_frame",
+    "fit_calibration",
+    "fit_models",
+    "gather",
+    "graph_inputs",
+    "log",
+    "make_candidates",
+    "metrics",
+    "model_risks",
+    "ndcg",
+    "p3",
+    "ranks",
+    "score",
+    "signature",
+    "ts",
+    "write",
+    "zscore"
+  ],
+  "adaptations": [
+    "Repository-relative imports and configurable local input/output paths",
+    "No document-preservation operations",
+    "Local data-access record for reproduction rather than historical download authorization",
+    "Protocol configuration copied byte-for-byte before run locking"
+  ],
+  "scope": "Numerical routines unchanged; synthetic tests and aggregate checks do not substitute for a full source-data rerun"
+}

@@ -1,0 +1,17 @@
+{
+  "source_url": "https://www.kaggle.com/datasets/mkechinov/ecommerce-events-history-in-cosmetics-shop",
+  "provider": "REES46 Marketing Platform",
+  "distributor": "Michael Kechinov",
+  "source_archive_sha256": {
+    "2019-Oct.csv": "2ff4afaf3e18e072dac566245c57613a42ddd1927b4fbc36e82da40a961d144e",
+    "2019-Nov.csv": "4b2f18a74e159d929b93ec1ca01629c115e492906d97a073aebd1acd76d1b358",
+    "2019-Dec.csv": "2cbd4915d652481a32712882793d76456b3f8774b3edb68039763cd443d8e3e1"
+  },
+  "development_archive_sha256": {
+    "2019-Oct.csv": "2ff4afaf3e18e072dac566245c57613a42ddd1927b4fbc36e82da40a961d144e",
+    "2019-Nov.csv": "4b2f18a74e159d929b93ec1ca01629c115e492906d97a073aebd1acd76d1b358"
+  },
+  "raw_events_redistributed": false,
+  "user_level_artifacts_redistributed": false,
+  "evaluation_scope": "October fitting/calibration, November development and December evaluation; public-preview qualification in evaluation_status.json"
+}

@@ -41,3 +41,13 @@ The driver refuses comparisons if the smoke test, source hashes, input manifest 
 Source files retain their numerical routines; public packaging replaces the local backup helper with a checksum-only utility, excludes document-preservation operations and provides a portable comparison launcher. `reproducibility/source_provenance.json` records source/public checksums. Historical execution records refer to the code used for those executions, not automatically to the repackaged files. Recreate all local manifests and smoke records before rerunning; do not copy historical approvals onto new inputs.
 
 The numerical artifacts in `results/olx/` are aggregate summaries. Per-user paired ranks, candidate sets, checkpoints and recommendation arrays are intentionally absent, so full-data reproduction requires authorized source access. Release checks verify the public package and unchanged aggregate numbers, not unrestricted independent access to the private observations.
+
+## Cosmetics validation
+
+The portable driver reuses the OLX graph and bootstrap primitives but runs a separately specified cart-to-purchase task. See [experiments/cosmetics/README.md](experiments/cosmetics/README.md). It uses scikit-learn rather than the OLX PyTorch ensemble. Run its synthetic tests without real data:
+
+```shell
+python -m unittest discover -s experiments/cosmetics/tests -v
+```
+
+The reported study fixed settings before full December download, with the public-preview qualification documented in the results. A reproduction using already-available archives is not a new held-out study. Portable code changes paths and execution-record handling; it does not change the feature, model, graph, scoring or inference routines. Source and portable hashes are recorded in `reproducibility/cosmetics_source_provenance.json`.

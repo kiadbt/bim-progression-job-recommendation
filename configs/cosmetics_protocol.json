@@ -1,0 +1,120 @@
+{
+  "study": "Bounded temporal validation of personalized nonprogression in cosmetics recommendation",
+  "status": "Recorded analysis specification; see evaluation-status qualifications",
+  "source_url": "https://www.kaggle.com/datasets/mkechinov/ecommerce-events-history-in-cosmetics-shop",
+  "prior_inspection": "October and November feasibility outcomes were inspected. A public December preview was visible during dataset selection; full December eligibility, labels and performance were computed after settings were fixed.",
+  "primary_pathway": "cart to purchase",
+  "source_event": "cart",
+  "progression_event": "purchase",
+  "horizon_seconds": 86400,
+  "source_timestamp_order": "Only strictly later purchases qualify. Features use events strictly earlier than source. Candidate exclusion uses every event at or before source.",
+  "pseudo_label": "One minus indicator of a same-user same-product purchase strictly after cart and within 24h. Missing purchase is not dislike or verified abandonment.",
+  "model_training": {
+    "source_start_inclusive": "2019-10-01T00:00:00Z",
+    "source_end_exclusive": "2019-10-20T00:00:00Z",
+    "labels_available_before": "2019-10-21T00:00:00Z",
+    "selection": "Latest eligible training-prefix cart per user, then at most 50000 users by SHA-256 of seed and user ID, without label-based selection. Latest rather than first carts allow prior matured cart features to vary.",
+    "model": "sklearn MLPClassifier, hidden layers (32,16), ReLU, Adam, learning_rate_init .001, alpha .0001, batch_size 512, max_iter 8, early_stopping false, single fixed seed 20261024",
+    "scaling": "StandardScaler fit on selected training cases only",
+    "full_features": [
+      "log prior user events",
+      "log prior item events",
+      "log prior user-item events",
+      "log prior user views",
+      "log prior user carts",
+      "log prior user purchases",
+      "log prior user removals",
+      "log seconds since prior user event capped at 30 days plus missing flag",
+      "UTC hour sine",
+      "UTC hour cosine",
+      "log prior fully matured user cart successes",
+      "log prior fully matured user cart nonprogressions"
+    ],
+    "context_control": "Same network, optimizer, seed, cases and budget, excluding the last two matured cart outcome features",
+    "no_post_source_features": true
+  },
+  "conditional_calibration": {
+    "query_start_inclusive": "2019-10-21T00:00:00Z",
+    "query_end_exclusive": "2019-10-27T00:00:00Z",
+    "outcomes_available_before": "2019-10-28T00:00:00Z",
+    "history_and_catalog_cutoff": "2019-10-21T00:00:00Z",
+    "selection": "Same conditional other-item ranking eligibility, earliest query per user, maximum 10000 users by fixed SHA-256 order",
+    "method": "Positive-slope sigmoid of raw probability logit, fit separately for full and context models on calibration labels only",
+    "stop_if": "Fewer than 200 calibration users or fewer than 10 cases in either pseudo-label class",
+    "global_risk": "Mean pseudo-label in conditional calibration cases; fixed for November and December"
+  },
+  "development": {
+    "query_interval": [
+      "2019-11-01T00:00:00Z",
+      "2019-12-01T00:00:00Z"
+    ],
+    "graph_and_profile_cutoff": "2019-11-01T00:00:00Z",
+    "maximum_users": 2000,
+    "require_source_plus_24h_strictly_before_period_end": true
+  },
+  "held_out": {
+    "query_interval": [
+      "2019-12-01T00:00:00Z",
+      "2020-01-01T00:00:00Z"
+    ],
+    "graph_and_profile_cutoff": "2019-12-01T00:00:00Z",
+    "maximum_users": 3000,
+    "require_source_plus_24h_strictly_before_period_end": true,
+    "download_gate": "Historical study settings preceded full December download. Portable reproduction uses locally supplied archives and must not be described as a fresh independent evaluation."
+  },
+  "conditional_ranking_cases": "Warm pre-cutoff user, first eligible cart followed within 24h by purchase of a different product observed in the pre-cutoff positive-event catalog but never observed for that user at or before query. Select earliest qualifying purchase, ID breaks target-time ties. One earliest eligible query per user, then fixed SHA-256 cap. This conditions on a future other-item purchase and is not an unconditional deployed-user evaluation.",
+  "candidate_sampling": "Target plus 999 distinct uniform pre-cutoff catalog products unseen through query. Per-user deterministic seed 20261024; same candidates for every model. Previously unpurchased products are unobserved comparisons, not verified negatives.",
+  "graph": {
+    "positive_events": [
+      "view",
+      "cart",
+      "purchase"
+    ],
+    "history": "All pre-cutoff users; binary user-product graph retaining each user's 100 most recently observed distinct products, with ascending product ID breaking timestamp ties. Uncapped pre-cutoff histories still define user/catalog eligibility and query exclusions.",
+    "reason_for_cap": "Fixed computational bound for a small validation study; differs from the uncapped OLX graph and must be disclosed",
+    "RP3Beta": {
+      "alpha": 1,
+      "beta": 0.3,
+      "topk": 200,
+      "zero_diagonal": true,
+      "block_size": 64
+    },
+    "external_component": "P3LTR degree-recency component using existing fixed OLX component coefficients on the same capped graph; not the full published P3LTR model and not retuned on cosmetics"
+  },
+  "item_profiles": "Count all cart sources with source+24h strictly before graph cutoff, with same-item purchase outcome in 24h. Counts are source events, not distinct people. Duplicate event/user/product/second keys are collapsed.",
+  "fusion": {
+    "base": "Candidate-row z-score of RP3Beta scores",
+    "signal": "log(1+mature same-item successes) minus user risk times log(1+mature same-item nonprogressions)",
+    "normalization": "Mean-center each signal row; divide every risk variant by the same candidate-row standard deviation of the fixed-global-risk signal plus 1e-8. This avoids changing signal scale with personalized risk.",
+    "variants": [
+      "actual_calibrated",
+      "fixed_global",
+      "shuffled_calibrated",
+      "context_calibrated",
+      "success_only",
+      "popularity"
+    ],
+    "shuffled_control": "Fixed seeded permutation of calibrated scores among selected cases within each period; negative control only, not a deployable method",
+    "popularity": "Candidate-row z-score of log(1+pre-cutoff positive-event count)",
+    "gamma_grid": [
+      0,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "selection": "Separately choose each variant weight by November NDCG@10, then Recall@10, then smallest gamma. Serialize choices before December download. Also report controls at the actual model's selected gamma as an exploratory matched-weight sensitivity."
+  },
+  "primary_endpoint": "December sampled-candidate NDCG@10 difference: actual_calibrated minus fixed_global, each using its November-selected weight",
+  "inference": "5000 paired user bootstrap replicates, seed 20261024, 95% percentile interval for the single primary contrast. Other ranking and prediction contrasts are exploratory pointwise intervals without multiplicity adjustment. No claim about practical utility solely from statistical significance.",
+  "secondary_outputs": [
+    "Recall/HitRate@10",
+    "MRR@10",
+    "base RP3Beta and P3LTR component",
+    "actual versus shuffled/context/success-only/popularity",
+    "conditional nonprogression AUC, AP, Brier score and log loss",
+    "matched-weight sensitivity",
+    "zero-graph-target-score fraction"
+  ],
+  "scope": "Single-seed, sampled-candidate cross-domain validation; no architecture search, secondary view-to-cart experiment or full-catalog claim.",
+  "integrity": "Store immutable input/protocol/code fingerprints; smoke-test strict-time features, candidate eligibility, deterministic ties and exact target ranks before held-out evaluation. Any necessary bug repair must be recorded, not silently tuned to results."
+}

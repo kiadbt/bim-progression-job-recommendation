@@ -2,16 +2,20 @@
   "algorithm": "SHA-256",
   "files": {
     ".gitattributes": {
-      "sha256": "f81644cfc9d74823fe1e0da6f6cae680a6dd6fac7a7b009943394a826354edd0",
-      "bytes": 65
+      "sha256": "d7f2e73db7c4ee5ce361671e259b7d7c0792da0174e366e60f4f0d1450b4b840",
+      "bytes": 115
     },
     ".gitignore": {
-      "sha256": "6fc43488e0c23a1e41a908e0d605aa1bbf9911d574802b15322c70c312a6fd95",
-      "bytes": 428
+      "sha256": "8bc4b58fdf95ee719643c36eceae12a78a045e648adcf01cae8672a6d41db220",
+      "bytes": 467
     },
     "configs/comparison_contract.json": {
       "sha256": "0c93760544e330253f6b1a652d73825c02c2082bf8dba90ecdb728a6df2e042c",
       "bytes": 7799
+    },
+    "configs/cosmetics_protocol.json": {
+      "sha256": "227f034432d6903e16443f1a3c61a44455045b7dab80c071e3cd3858adb2cbdb",
+      "bytes": 7945
     },
     "configs/mlp_context.json": {
       "sha256": "0a9e107e91c0acacb75f14bdd6ee9d0074e1a43f448deabc9687f9551ec4f712",
@@ -26,8 +30,20 @@
       "bytes": 4105
     },
     "DATA.md": {
-      "sha256": "ad49aef334b318a91f7b8e90d02e1482e7fe26b98bd54ad72829c2f927ee7aed",
-      "bytes": 2157
+      "sha256": "7e65ed9b80c958ed0b73ca7b0f918b809915a7de6c42643bb63aa3e537a2b4ab",
+      "bytes": 3374
+    },
+    "experiments/cosmetics/README.md": {
+      "sha256": "6e7bfe2d5e8fa04a2c23392bdab21f14ca3cbc634a9bd5a5eceba19fad8dffb7",
+      "bytes": 3974
+    },
+    "experiments/cosmetics/src/run_validation.py": {
+      "sha256": "3272e206c2de3f0fb9bcac4a5852ff573a8ea851b9b4d90402375eb8e350a4dc",
+      "bytes": 22346
+    },
+    "experiments/cosmetics/tests/test_protocol.py": {
+      "sha256": "9b931de2a3c69e9c5d892fca3b42d30b4efab589903d710e8ee6ec63fb140250",
+      "bytes": 2220
     },
     "experiments/olx/src/analyse_and_calibrate_contact_models.py": {
       "sha256": "ae0c416d2fa26f73974539fd583f27e6617537a0857b4031c26f50266cc4239d",
@@ -178,8 +194,12 @@
       "bytes": 3429
     },
     "README.md": {
-      "sha256": "49d54a11722594cb564679b5dd6a04089d3c59f1915718b3518fb2581c26468b",
-      "bytes": 4091
+      "sha256": "acd4648da09cfcf9927bd3caf9a71f9a86121d88c16a214af87cfa6525a6770a",
+      "bytes": 5597
+    },
+    "reproducibility/cosmetics_source_provenance.json": {
+      "sha256": "c543f31f4b102f12f1d77caf7215ddd3248e1baf8875344501f91c7bd99506be",
+      "bytes": 1000
     },
     "reproducibility/environment.json": {
       "sha256": "7dbeb30563637e3eecc6fae0395286de16540e7a7730291dcc19bfa083466be0",
@@ -194,12 +214,40 @@
       "bytes": 17840
     },
     "REPRODUCIBILITY.md": {
-      "sha256": "9e2753bf784bb1f5f62543cd519112aebd2b5a5a291685405aa6665fe3a564bf",
-      "bytes": 5454
+      "sha256": "b3ab2f6cf9b388df0a48f0ba6eb346ba89c25d3ca925f53a028a7251d22af27d",
+      "bytes": 6290
     },
     "requirements.txt": {
       "sha256": "39732357a4de2d1ac321a2bcdeff6e87c84aa2c3b86d4088200e31ae02dfcbaa",
       "bytes": 105
+    },
+    "results/cosmetics/data_provenance.json": {
+      "sha256": "e9dccbdeb1d1a0f5565443c027813a66d46c80ef726ed5a32e645a41f7cee0b6",
+      "bytes": 937
+    },
+    "results/cosmetics/development.json": {
+      "sha256": "4a260ee818a7b57e5a2ad819e920655ac800246c17497a79622b634323f8a796",
+      "bytes": 6832
+    },
+    "results/cosmetics/evaluation.json": {
+      "sha256": "78fb3408cb753564282d77fc5211cf836a2d08b5fe77cc7eb33f0a39c4634f12",
+      "bytes": 2739
+    },
+    "results/cosmetics/evaluation_status.json": {
+      "sha256": "8b70f95f28a82a93512736eb05cf482530492196b6561d4e6792e045c52c682a",
+      "bytes": 546
+    },
+    "results/cosmetics/paired_comparisons.json": {
+      "sha256": "628a24312056230f3aaccc480c3a66af25c07fe0d7324da96b08c5ed043dd52f",
+      "bytes": 6405
+    },
+    "results/cosmetics/prediction_fit.json": {
+      "sha256": "5a0612075cfeb0e4e4957defbe9a88e8412c3f01cfaf837a054f77c39ce61305",
+      "bytes": 1755
+    },
+    "results/cosmetics/selected_settings.json": {
+      "sha256": "c2946fd34861ca3f28bbdd94398e1ca8920ab52bfdf307f5d34941b356b50c7c",
+      "bytes": 863
     },
     "results/olx/conditional_calibration.json": {
       "sha256": "7f7ac6bb13fb6e61e2af4598074a0b990452db481c276d7ba70bd21c139e2d15",
@@ -246,8 +294,8 @@
       "bytes": 47892
     },
     "RESULTS.md": {
-      "sha256": "4fae4b0234288b601f99fbc32ebbf9f113ecdd88b438c7f10a1000ad9a2e13f6",
-      "bytes": 2605
+      "sha256": "050d4044eb8abefe2bfb5ece3ae4d079dfac66ea96c9ac756059785063d990eb",
+      "bytes": 4090
     },
     "src/ablate_bim_mlp_olx.py": {
       "sha256": "1e1781b315e006b906b71a9bc1e5b369022c017dd834debd0bd3ea6785e027dd",
@@ -281,9 +329,13 @@
       "sha256": "e7c5e6497ec0ad52c02c08781ba7d877d75a51784ebb7a6ff61637150957a7b5",
       "bytes": 20062
     },
+    "tools/verify_cosmetics_results.py": {
+      "sha256": "aaf34faa9a842f46047499ad7eb64917058b11e4791fb6b50258de808c93c941",
+      "bytes": 2094
+    },
     "tools/verify_release.py": {
-      "sha256": "c4a31ffac7f8ea408417aa0f9c229d95aa11d000f72dd3c50a2863d9542925ab",
-      "bytes": 1172
+      "sha256": "1f5a0309c01a438b12fad7b17406eebcbf9e43418829f37d662e23d68e303293",
+      "bytes": 1191
     }
   }
 }

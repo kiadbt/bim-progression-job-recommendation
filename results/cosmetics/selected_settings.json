@@ -1,0 +1,21 @@
+{
+  "selection_period": "November 2019 only",
+  "weights": {
+    "actual": 0.1,
+    "context": 0.1,
+    "fixed_global": 0.1,
+    "shuffled": 0.1,
+    "success_only": 0.1,
+    "popularity": 0.1
+  },
+  "selection_outcomes_end_exclusive": 1575158400,
+  "source_signature": {
+    "protocol": "b535f2d211d6998bb344dc0899fe74123d878e0dd816672ca68a60fb35569efa",
+    "driver": "19fa45f997d462bc6352b90cc42b877d5be4e2b4232f3d4a4d230fab37cbd780",
+    "rp3_adapter": "231abf98c075a63100fa6004372c81f60e5e2b6f0000f7bde8f47e4f5acdb028",
+    "primitives": "33b20b668ee3169f718127b055def625952a05b5612ad75f3767b33e9ed9ecb4"
+  },
+  "model_sha256": "30dbb25be5432a2d05cdc461b33a99adf918db0173b209dbee126343c89a2b05",
+  "development_cases_sha256": "02156c064abed5b70dfcc6e1444c073e68d736c3e472c46f6918897696fa15d2",
+  "settings_recorded_utc": "2026-10-24T05:38:17.038479+00:00"
+}

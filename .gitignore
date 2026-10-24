@@ -23,3 +23,7 @@ experiments/olx/driver_integration/
 experiments/olx/statistical_analysis/
 experiments/olx/risk_transfer_diagnostic/
 experiments/olx/normalization_experiment/
+local_data/
+local_work/
+*.pkl
+*.pickle

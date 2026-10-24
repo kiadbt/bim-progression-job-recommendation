@@ -1,0 +1,67 @@
+{
+  "training_users": 50000,
+  "calibration": {
+    "eligible_distinct_users_before_cap": 1739,
+    "selected_users": 1739,
+    "cutoff": 1571616000,
+    "query_start": 1571616000,
+    "query_end": 1572134400
+  },
+  "calibration_class_counts": {
+    "0": 1248,
+    "1": 491
+  },
+  "training_users_with_mature_history": 5454,
+  "models": {
+    "actual": {
+      "iterations": 8,
+      "training_loss": 0.25913303883774036,
+      "warnings": [
+        "Stochastic Optimizer: Maximum iterations (8) reached and the optimization hasn't converged yet."
+      ],
+      "calibration_parameters": {
+        "slope": 0.14576642723980976,
+        "intercept": -1.1819568671999192
+      },
+      "feature_names": [
+        "log_user_events",
+        "log_item_events",
+        "log_pair_events",
+        "log_user_views",
+        "log_user_carts",
+        "log_user_purchases",
+        "log_user_removals",
+        "log_user_recency",
+        "recency_missing",
+        "hour_sin",
+        "hour_cos",
+        "log_mature_user_success",
+        "log_mature_user_nonprogression"
+      ]
+    },
+    "context": {
+      "iterations": 8,
+      "training_loss": 0.26007323879147587,
+      "warnings": [
+        "Stochastic Optimizer: Maximum iterations (8) reached and the optimization hasn't converged yet."
+      ],
+      "calibration_parameters": {
+        "slope": 0.037765970009587486,
+        "intercept": -0.9911837720805021
+      },
+      "feature_names": [
+        "log_user_events",
+        "log_item_events",
+        "log_pair_events",
+        "log_user_views",
+        "log_user_carts",
+        "log_user_purchases",
+        "log_user_removals",
+        "log_user_recency",
+        "recency_missing",
+        "hour_sin",
+        "hour_cos"
+      ]
+    }
+  }
+}

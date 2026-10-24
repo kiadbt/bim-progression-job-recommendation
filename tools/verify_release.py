@@ -17,7 +17,7 @@ def main():
             ast.parse(path.read_text(encoding='utf-8'), filename=name)
         elif path.suffix == '.json':
             json.loads(path.read_text(encoding='utf-8'))
-    private_extensions = {'.docx', '.doc', '.pdf', '.zip', '.parquet', '.npy', '.npz', '.pt', '.pth'}
+    private_extensions = {'.docx', '.doc', '.pdf', '.zip', '.parquet', '.npy', '.npz', '.pt', '.pth', '.pkl', '.pickle'}
     assert not [p for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts
                 and p.suffix.lower() in private_extensions]
     print(f"Verified {len(manifest['files'])} public files; no document or row-level artifacts found.")

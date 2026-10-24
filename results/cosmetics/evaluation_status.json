@@ -1,0 +1,8 @@
+{
+  "evaluation_period": "December 2019",
+  "public_preview_visible_before_settings_lock": true,
+  "full_december_computation_after_settings_lock": true,
+  "settings_changed_after_december_outcomes": false,
+  "models_refitted_on_december": false,
+  "description": "Public sample rows, schema and aggregate column summaries were visible during dataset selection. Full-file conditional eligibility, labels and model performance were computed after the protocol and November weights were fixed. December must not be described as wholly unviewed."
+}

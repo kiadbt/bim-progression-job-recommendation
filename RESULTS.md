@@ -25,3 +25,11 @@ Bootstrap intervals condition on the fitted models, selected settings and observ
 Conditional ranking and full-catalog ranking have different relevance definitions and populations: their absolute scores cannot be compared directly. `P3LTR` means only the degree-recency component with fixed published coefficients, not the complete learned P3LTR procedure or all its factors.
 
 For the tail-target comparison, 12 RP3Beta users and 11 contact-count users have nonzero tail-target NDCG among 17,348 eligible users. Those counts refer to users, not individual positive hits, and do not support a strong subgroup-effect claim. Coverage is not a guarantee of tail quality or fairness.
+
+## Cosmetics results
+
+The separate `results/cosmetics/` directory contains `development.json`, `evaluation.json`, `paired_comparisons.json`, `prediction_fit.json`, `selected_settings.json`, `evaluation_status.json` and `data_provenance.json`. Numerical arrays and estimates retain recorded precision. They are aggregate summaries, not per-user observations.
+
+The primary contrast is December personalized minus fixed-global-risk NDCG@10, flagged `prespecified_primary: true`. It is the one prespecified 95% interval. The reused generic bootstrap helper also emits `primary_family: false` and an exploratory default `interval_scope`: these refer to its optional five-comparison family, not the cosmetics primary-endpoint designation. The explicit flag, interpretation and saved protocol identify the primary contrast; all other cosmetics intervals are exploratory pointwise 95% intervals without multiplicity adjustment. These metadata do not alter any numerical estimate.
+
+OLX and cosmetics use different events, horizons, model sizes and populations; their absolute scores cannot be pooled or directly compared. In cosmetics, both predictors reached their eight-iteration limit without convergence and the history model did not outperform context. Success-only scoring is numerically highest, but its paired difference from personalized risk has an interval spanning zero. The small primary difference likewise does not establish equivalence or universal failure of personalization.
