@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-10-24T08:58:24.013877+00:00",
+  "question": "Does a fixed extension from eight to 32 training epochs materially change development prediction diagnostics?",
+  "budget": "Exactly 24 partial_fit epochs continuing each saved eight-epoch MLP; no checkpoint or seed selection.",
+  "fixed": [
+    "training cases",
+    "features",
+    "training scaler",
+    "architecture",
+    "optimizer state",
+    "learning rate",
+    "seed"
+  ],
+  "assessment": "October conditional calibration and November development prediction only; report original and extended fits.",
+  "calibration": "Refit the same positive-slope sigmoid on original October calibration cases for each extended model.",
+  "stopping": "Fixed 32 total epochs; no stopping or model selection based on calibration or November metrics.",
+  "exclusions": "No December data, risks, ranks, metrics, graph construction or model selection. No replacement of published eight-epoch results.",
+  "status": "Post hoc training diagnostic, not independent confirmation or a ranking experiment.",
+  "inputs": {
+    "models.pkl": "30dbb25be5432a2d05cdc461b33a99adf918db0173b209dbee126343c89a2b05",
+    "cart_features_development.parquet": "1b48ed89df904fcf2ff7d3a90d5ad842e04a34116b689236b87e9d1ddfdba4ad",
+    "calibration_cases.parquet": "76fa8f2f2268da07e27d952fcdd9fb2dc5bbd52fe7c57e5f3c923665255c85a4",
+    "development/paired_cases.parquet": "02156c064abed5b70dfcc6e1444c073e68d736c3e472c46f6918897696fa15d2"
+  },
+  "script_sha256": "1419b6ce10e1a850b18b27b9b0d449414cb1e62dc98fc9f85fb57a7aaecd3ae2"
+}

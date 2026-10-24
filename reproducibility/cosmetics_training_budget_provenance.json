@@ -1,0 +1,24 @@
+{
+  "historical_script_sha256": "1419b6ce10e1a850b18b27b9b0d449414cb1e62dc98fc9f85fb57a7aaecd3ae2",
+  "portable_script_sha256": "62c9dc2562a5fadcc8cdafd3e18a5f38bae80ca07a16b310eb0a76eccff71608",
+  "historical_protocol_sha256": "7563c9c484b521b8024957ba9996b299556a436e67eddc7ec7259136155ebe1d",
+  "aggregate_results_sha256": "34c30f289a06ac11482535b8d04a9a3844b7cffcbde057fc43d58dfd48ecde71",
+  "historical_results_preserved_byte_for_byte": true,
+  "function_ast_identity": [
+    "digest",
+    "write",
+    "main"
+  ],
+  "packaging_changes": [
+    "Portable command-line input/output directories",
+    "Require a fresh output directory",
+    "Import the adjacent portable validation driver"
+  ],
+  "scope": "October calibration and November development predictions only; no December access or ranking rerun.",
+  "private_inputs_not_distributed": [
+    "model checkpoints",
+    "feature rows",
+    "user-level case records"
+  ],
+  "interpretation": "Training loss falls at 32 epochs without satisfying the stopping criterion. This is not independent confirmation or a replacement of eight-epoch December ranking results."
+}

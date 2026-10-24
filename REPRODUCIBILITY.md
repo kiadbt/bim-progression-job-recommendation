@@ -44,6 +44,8 @@ The numerical artifacts in `results/olx/` are aggregate summaries. Per-user pair
 
 ## Cosmetics validation
 
+The fixed-budget continuation diagnostic is documented in the cosmetics README. It needs only the trusted development checkpoint and October–November feature/case files produced by the development phase. It refuses an existing output directory and never replaces those inputs. `python tools/verify_training_diagnostic.py` checks its published aggregate records without loading checkpoints or fitting models.
+
 The portable driver reuses the OLX graph and bootstrap primitives but runs a separately specified cart-to-purchase task. See [experiments/cosmetics/README.md](experiments/cosmetics/README.md). It uses scikit-learn rather than the OLX PyTorch ensemble. Run its synthetic tests without real data:
 
 ```shell

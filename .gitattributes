@@ -4,3 +4,6 @@
 *.md text eol=lf
 .gitignore text eol=lf
 .gitattributes text eol=lf
+# Preserve byte identities of the recorded training diagnostic.
+configs/cosmetics_training_budget.json -text
+results/cosmetics/training_budget_diagnostic.json -text

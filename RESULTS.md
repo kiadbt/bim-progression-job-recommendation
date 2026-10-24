@@ -28,6 +28,8 @@ For the tail-target comparison, 12 RP3Beta users and 11 contact-count users have
 
 ## Cosmetics results
 
+`training_budget_diagnostic.json` records the separate October–November extension from eight to 32 MLP epochs. Training loss decreases without meeting the stopping criterion, while November history-model calibrated AUC decreases. It is a post hoc prediction diagnostic, not a December ranking rerun or independent validation. The December comparisons below retain the original eight-epoch models.
+
 The separate `results/cosmetics/` directory contains `development.json`, `evaluation.json`, `paired_comparisons.json`, `prediction_fit.json`, `selected_settings.json`, `evaluation_status.json` and `data_provenance.json`. Numerical arrays and estimates retain recorded precision. They are aggregate summaries, not per-user observations.
 
 The primary contrast is December personalized minus fixed-global-risk NDCG@10, flagged `prespecified_primary: true`. It is the one prespecified 95% interval. The reused generic bootstrap helper also emits `primary_family: false` and an exploratory default `interval_scope`: these refer to its optional five-comparison family, not the cosmetics primary-endpoint designation. The explicit flag, interpretation and saved protocol identify the primary contrast; all other cosmetics intervals are exploratory pointwise 95% intervals without multiplicity adjustment. These metadata do not alter any numerical estimate.
