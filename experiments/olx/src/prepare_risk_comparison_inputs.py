@@ -51,15 +51,12 @@ def main():
         'control_source_sha256':sha256(source),'downstream_ranking_comparisons_started':False}
     (base/'risk_comparison_preconditions.json').write_text(json.dumps(plan,indent=2),encoding='utf-8')
     claims={'main_operational_path':{'implementation':'Pre-cutoff global successful-contact-count prior fused with RP3Beta',
-            'source':'src/evaluate_deployable_progression_full_catalog_olx.py load_split',
+            'source':'experiments/olx/src/run_repaired_ranking.py',
             'uses_mlp':False,'uses_maturity_horizons':False,'uses_negative_gnn':False},
         'auxiliary_bim_path':{'implementation':'Maturity-aware attempt histories and MLP predicting Q90 nonprogression pseudo-labels',
-            'status':'Prediction and calibration reruns complete; recommendation effect not yet tested under repaired protocol'},
-        'architecture_revision_rule':'Draw separate operational count-fusion and auxiliary BIM paths; no unsupported maturity-to-main-score or dual-GNN connection',
-        'supported_so_far':['Corrected primitive evidence has better contact-prediction discrimination and probability loss than the context control in this retrospective cohort',
-            'Calibration is population-specific; an overall improvement did not transfer to the conditional ranking cohort'],
-        'not_supported_yet':['BIM improves recommendations','A unique progression mechanism explains the full-catalog gain',
-            'State-of-the-art accuracy','Independent cross-domain transfer','Deployment or employment benefit'],
+            'status':'Inputs prepared for conditional sampled ranking; this step does not run ranking comparisons'},
+        'component_separation':'Full-catalog count fusion and conditional MLP-risk fusion are separate tasks; neither uses a dual-channel GNN',
+        'interpretation':'Prediction quality, calibration and ranking utility require separate comparisons; this preparation step establishes no ranking benefit',
         'scope':'Source-outcome prediction and candidate ranking are distinct evaluation tasks'}
     (base/'implementation_claims_map.json').write_text(json.dumps(claims,indent=2),encoding='utf-8')
     print(json.dumps({'status':'control_inputs_prepared_not_ranked','cases':len(frame),'sha256':plan['input_sha256']},indent=2))

@@ -1,6 +1,6 @@
-# Behavioral Nonprogression and Ranking Utility in Job Recommendation
+# Behavioral Nonprogression in Job Recommendation: From Prediction to Ranking
 
-Code, experiment settings, regression tests and aggregate results for a primary OLX Jobs study with a bounded REES46 Cosmetics Shop validation of whether predicting source-attempt nonprogression improves ranking of alternative jobs.
+Code, experiment settings, regression tests and aggregate results accompanying *Behavioral Nonprogression in Job Recommendation: From Prediction to Ranking*. The primary OLX Jobs study examines whether predicting source-attempt nonprogression improves ranking of alternative jobs. A separate REES46 Cosmetics Shop study provides an exploratory cart-to-purchase comparison.
 
 ## Study scope
 
@@ -17,7 +17,7 @@ History features improve source-outcome probability prediction relative to the c
 
 In the separate full-catalog task, successful-contact count fusion increases RP3Beta NDCG@10 from 0.074749 to 0.074970 (approximately 0.30% relative). Popularity, recency and the fixed published P3LTR degree-recency component are more accurate. Tail-target results are sparse and descriptive. These results do not establish a new state-of-the-art architecture, causal user benefit or psychological assessment.
 
-## Cross-domain validation
+## Exploratory cross-domain evaluation
 
 The separate cart-to-purchase study uses October–December 2019 from REES46 Cosmetics Shop. We did not identify another public job-interaction dataset with the required timestamped source/progression events and follow-up, so cosmetics provides a cross-domain check rather than a second job-domain replication.
 
@@ -55,7 +55,7 @@ python tools/verify_release.py
 
 No manuscript, supplementary document, cover letter, declarations, raw interactions, user-level predictions, candidate arrays, recommendation lists or model weights are distributed. Source-data authorization is required for end-to-end reruns. Aggregate files are not a substitute for private inputs, and historical execution hashes are not fresh-run validation records.
 
-The repository URL is unchanged. Earlier repository contents remain available in Git history but are not the result release documented here. No publication DOI is assigned in this repository.
+Use the default branch for the current documentation. Links containing `/tree/<commit>` identify fixed snapshots and do not change when the repository is updated. To reproduce a particular release, record its full commit identifier. Earlier contents remain available in Git history. No publication DOI is assigned in this repository.
 
 ## Contact
 

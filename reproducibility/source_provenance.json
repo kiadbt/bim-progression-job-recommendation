@@ -124,8 +124,8 @@
       "module": "prepare_risk_comparison_inputs.py",
       "source_sha256": "3ec839858a96a0928f8c8c9692878cb4db8e3156ff1240759f1953e0d17dc8d8",
       "public_path": "experiments/olx/src/prepare_risk_comparison_inputs.py",
-      "public_sha256": "5018a71bdc3bb8f11fc401e2aac79afc9b4c77920e7908445b26d14ab6249a7b",
-      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only"
+      "public_sha256": "0d34d7bfed4131287ab6f1e2af6cff12e98bc8fdd2e3b3c48a695dbd67ba2bed",
+      "adaptation": "Hash-helper import, relative layout and non-scientific record/backup housekeeping only; descriptive component-map wording updated without changing numerical routines"
     },
     {
       "module": "preprocess_olx.py",
