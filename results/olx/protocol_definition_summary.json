@@ -1,0 +1,56 @@
+{
+  "training_fit_cutoff": 1582312306,
+  "component_transition_windows": [
+    {
+      "source_event": "chat_click",
+      "target_event": "contact_chat",
+      "transition_count": 338637,
+      "q90_seconds": 110,
+      "q95_seconds": 194
+    },
+    {
+      "source_event": "contact_phone_click_1",
+      "target_event": "contact_phone_click_2",
+      "transition_count": 215701,
+      "q90_seconds": 9,
+      "q95_seconds": 19
+    },
+    {
+      "source_event": "contact_phone_click_1",
+      "target_event": "contact_phone_click_3",
+      "transition_count": 32460,
+      "q90_seconds": 9,
+      "q95_seconds": 18
+    }
+  ],
+  "combined_phone_rule": "Maximum of separate call and SMS Q90 values and maximum of separate Q95 values; not pooled phone-delay quantiles.",
+  "parameter_estimation": "Positive-time adjacent transitions whose targets precede the fitting cutoff.",
+  "outcome_labels": "Any qualifying same-user-item progression within the pathway window, not necessarily the immediately adjacent event.",
+  "olx_target_selection": "Choose the first successful contact on any different job within 24 hours, then filter that source by catalog/unseen eligibility. No later target substitution. Retain the earliest remaining eligible source per user and partition.",
+  "cosmetics_target_selection": "Choose the earliest eligible unseen alternative purchase; skip earlier ineligible purchases.",
+  "source_history_support": [
+    {
+      "split": "test",
+      "cases": 12783,
+      "mature_source_history_cases": 1720,
+      "prior_source_attempt_cases": 1721,
+      "mature_source_history_percent": 13.455370413830869,
+      "prior_source_attempt_percent": 13.463193303606353
+    },
+    {
+      "split": "validation",
+      "cases": 21046,
+      "mature_source_history_cases": 2478,
+      "prior_source_attempt_cases": 2480,
+      "mature_source_history_percent": 11.774208875795876,
+      "prior_source_attempt_percent": 11.783711869238811
+    }
+  ],
+  "support_definition": "At least one resolved Q90 outcome for a strictly prior source attempt in the same user-job sequence and pathway; not candidate-item history support.",
+  "source_sha256": {
+    "bim_features_successful_contact.parquet": "ff65179811f7bd2b3fa230842f854892a9eda6d7af0cde3ace2688c7910720b1",
+    "sampled_cases.parquet": "22b4f1b33edeb77b51cc8e4c7b19a6e2082b1bec9fd614c60a2447e9ab295861",
+    "training_temporal_windows.csv": "08b5e3bd5f4f6938e331c1a23318e058fc7e119f60a589f2e6ccbf5acfca3f08"
+  },
+  "existing_results_unchanged": true
+}

@@ -28,6 +28,8 @@ For the tail-target comparison, 12 RP3Beta users and 11 contact-count users have
 
 ## Cosmetics results
 
+The cosmetics exercise is an exploratory cross-domain check. All fusion weights lie at the upper grid boundary, 0.1; no interior optimum or robustness to larger weights is established. The target search skips ineligible earlier purchases, unlike the OLX first-contact-then-filter ordering. See the protocol definition notes in `REPRODUCIBILITY.md`.
+
 `training_budget_diagnostic.json` records the separate October–November extension from eight to 32 MLP epochs. Training loss decreases without meeting the stopping criterion, while November history-model calibrated AUC decreases. It is a post hoc prediction diagnostic, not a December ranking rerun or independent validation. The December comparisons below retain the original eight-epoch models.
 
 The separate `results/cosmetics/` directory contains `development.json`, `evaluation.json`, `paired_comparisons.json`, `prediction_fit.json`, `selected_settings.json`, `evaluation_status.json` and `data_provenance.json`. Numerical arrays and estimates retain recorded precision. They are aggregate summaries, not per-user observations.

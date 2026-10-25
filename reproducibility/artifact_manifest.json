@@ -18,12 +18,12 @@
       "bytes": 5597
     },
     "REPRODUCIBILITY.md": {
-      "sha256": "cddc2331c2945138c7de28ececa0d92c6d3ee6ada6c41cf9974973ce64906e92",
-      "bytes": 6701
+      "sha256": "5405d100f898ab10bc3392d9000d42c70ff03c1952988b035a99d8b68b0a1c06",
+      "bytes": 8050
     },
     "RESULTS.md": {
-      "sha256": "a2400c37e029a493743cad8ec7a0a990d6dbbc6a894e0e71ec49eba784fa7335",
-      "bytes": 4490
+      "sha256": "5f50ca64120e3af022b2b921c7fe87055788aafef87ebf76486945b98f1c6476",
+      "bytes": 4840
     },
     "configs/comparison_contract.json": {
       "sha256": "0c93760544e330253f6b1a652d73825c02c2082bf8dba90ecdb728a6df2e042c",
@@ -50,8 +50,8 @@
       "bytes": 4105
     },
     "experiments/cosmetics/README.md": {
-      "sha256": "914e3b8a5e3dd392988fe25a2b4ed60aba3eb203367df6bf68bdddc805f80336",
-      "bytes": 5680
+      "sha256": "10f91f1cb34d14c365cf50fcf5d32a4bfffc42665412bd5f8740af594f2a4925",
+      "bytes": 6438
     },
     "experiments/cosmetics/src/check_training_budget.py": {
       "sha256": "62c9dc2562a5fadcc8cdafd3e18a5f38bae80ca07a16b310eb0a76eccff71608",
@@ -62,8 +62,8 @@
       "bytes": 22346
     },
     "experiments/cosmetics/tests/test_protocol.py": {
-      "sha256": "9b931de2a3c69e9c5d892fca3b42d30b4efab589903d710e8ee6ec63fb140250",
-      "bytes": 2220
+      "sha256": "26e6ff1ea95e3f8fc53efab29eed3b23d6163c4d884bf94aad3405ab9d971e01",
+      "bytes": 2832
     },
     "experiments/olx/src/analyse_and_calibrate_contact_models.py": {
       "sha256": "ae0c416d2fa26f73974539fd583f27e6617537a0857b4031c26f50266cc4239d",
@@ -205,6 +205,10 @@
       "sha256": "91cab474641a830a95a74332646af822b90fb48e139ce8bcefaa7eddd78d557e",
       "bytes": 1815
     },
+    "experiments/olx/tests/test_protocol_definitions.py": {
+      "sha256": "173095967640d54249ae8ab6e36cdd9406a20aa88373583ded5bab3713170cd5",
+      "bytes": 4344
+    },
     "experiments/olx/tests/test_protocol_primitives.py": {
       "sha256": "4cdc033bdf277e2ed91b7f53c5126ea82bcbeecfd2916329da69bc62d311f306",
       "bytes": 4671
@@ -308,6 +312,10 @@
     "results/olx/prediction_and_ranking_statistics.json": {
       "sha256": "df22ed4b7a4fe080d2b1919f11d39ba93a23a3495e94d47e836988e9c4f88cd3",
       "bytes": 76617
+    },
+    "results/olx/protocol_definition_summary.json": {
+      "sha256": "1b44ab2b3d7f84f14c85afd7bbd0dd0a2dad60b9a015d306393846209db50fca",
+      "bytes": 2517
     },
     "results/olx/risk_transfer_diagnostics.json": {
       "sha256": "e0295da7fde68c40892ccdc86ad164628408c8dced07b8ee300a52dbf31f367d",

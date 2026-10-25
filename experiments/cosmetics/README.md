@@ -1,4 +1,4 @@
-# Cosmetics cart to purchase validation
+# Exploratory cosmetics cart-to-purchase check
 
 ## Training-budget diagnostic
 
@@ -18,6 +18,10 @@ The historical protocol and aggregate findings are `configs/cosmetics_training_b
 This secondary study asks whether personalized source-item nonprogression risk improves ranking beyond a matched fixed-global-risk control. OLX is the primary study. Shopping baskets do not reproduce job-search decisions, and this experiment is not an independent labor-market validation.
 
 ## Protocol
+
+The target is the earliest eligible unseen alternative purchase: an earlier purchase that fails eligibility is skipped. OLX uses a different ordering, selecting the first alternative contact before checking catalog and unseen-item eligibility, without falling back to a later contact for that source. Both are conditional tasks, not unrestricted next-action evaluation.
+
+Every fusion variant selects 0.1, the upper boundary of the recorded November weight grid. Equal-budget comparisons remain valid for that grid, but the search does not establish an interior optimum or adequate optimization over larger weights. The check does not independently reproduce the OLX combination of improved source prediction and unresolved incremental ranking value.
 
 - Training: 50,000 October users; latest eligible cart before 20 October. Features use strictly earlier events and only fully matured prior outcomes.
 - Calibration: 1739 conditional cases from 21–26 October, with outcomes available before 28 October. History has 13 inputs and context 11. Both use one (32,16) ReLU MLP, Adam, eight iterations and seed 20261024.

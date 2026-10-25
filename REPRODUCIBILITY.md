@@ -36,13 +36,19 @@ The driver refuses comparisons if the smoke test, source hashes, input manifest 
 
 ## Protocol and provenance
 
+Training windows are estimated from positive-time adjacent transitions ending before the fitting cutoff. Chat uses its transition-specific empirical Q90 and Q95. The combined phone pathway takes the maximum of the corresponding call and SMS quantiles, not a quantile of pooled phone delays. Outcome labels then search for any qualifying same-user–item progression in the window; this need not be the immediately adjacent event.
+
+OLX first selects the earliest successful contact on any different item within 24 hours, resolving ties by timestamp, item identifier and event name. It subsequently excludes that source when this target is previously seen or outside the pre-cutoff catalog. It does not substitute a later eligible contact for that source. The earliest remaining eligible source per user and partition is retained. Synthetic tests exercise this exact order and the different cosmetics target search.
+
+`results/olx/protocol_definition_summary.json` contains the component transition counts/windows and source-history support in the recorded conditional cohorts. Source-history support means at least one fully matured earlier source outcome in the same user–item sequence and pathway; it is not candidate-item history coverage. These are descriptive summaries of existing artifacts, not new model fits or ranking comparisons.
+
 `configs/comparison_contract.json` records temporal boundaries, eligibility, shared budgets, fixed comparator parameters and inference scope. It is a retrospective analysis specification, not prospective preregistration. The later full-catalog interval starts before the calibrated history-based predictor is available, so those probabilities are explicitly prohibited for that task.
 
 Source files retain their numerical routines; public packaging replaces the local backup helper with a checksum-only utility, excludes document-preservation operations and provides a portable comparison launcher. `reproducibility/source_provenance.json` records source/public checksums. Historical execution records refer to the code used for those executions, not automatically to the repackaged files. Recreate all local manifests and smoke records before rerunning; do not copy historical approvals onto new inputs.
 
 The numerical artifacts in `results/olx/` are aggregate summaries. Per-user paired ranks, candidate sets, checkpoints and recommendation arrays are intentionally absent, so full-data reproduction requires authorized source access. Release checks verify the public package and unchanged aggregate numbers, not unrestricted independent access to the private observations.
 
-## Cosmetics validation
+## Exploratory cosmetics check
 
 The fixed-budget continuation diagnostic is documented in the cosmetics README. It needs only the trusted development checkpoint and October–November feature/case files produced by the development phase. It refuses an existing output directory and never replaces those inputs. `python tools/verify_training_diagnostic.py` checks its published aggregate records without loading checkpoints or fitting models.
 

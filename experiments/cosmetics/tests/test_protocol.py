@@ -7,6 +7,15 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 import run_validation as v
 
 class CosmeticsProtocolTests(unittest.TestCase):
+    def test_target_search_skips_an_earlier_ineligible_purchase(self):
+        rows = [(1,'view',1,10), (2,'view',99,30), (50,'view',1,20),
+                (100,'cart',1,10), (110,'purchase',1,20), (120,'purchase',1,30)]
+        d = pd.DataFrame(rows,columns=['t','event_type','user_id','product_id'])
+        d['event_type'] = pd.Categorical(d.event_type,categories=['view','cart','purchase','remove_from_cart'])
+        sources = pd.DataFrame([{'case_id':1,'user_id':1,'product_id':10,'t':100,'y':1}])
+        got, _, _ = v.cases(d,sources,80,200000,80,100)
+        self.assertEqual(got.target.tolist(),[30])
+
     def test_strict_history_and_maturity(self):
         rows=[(0,'cart',1,10),(0,'view',1,11),(5,'purchase',1,10),
               (10,'cart',1,12),(86400,'cart',1,13),(86401,'cart',1,14),
